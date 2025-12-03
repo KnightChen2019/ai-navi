@@ -1,65 +1,103 @@
+'use client'
 import Image from "next/image";
+import { useState } from "react";
+import rawData from "../../data.json";
+import Link from "next/link";
+
 
 export default function Home() {
+
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState(rawData);
+  
+  const handleSearch = () => {
+    const filteredData = []
+    for (const section of rawData){
+      if (!section.cards.some((card: any) => 
+        card.name.toLowerCase().includes(search.toLowerCase()))){
+        continue
+      }
+      const filteredCards = section.cards.filter((card: any) => 
+        card.name.toLowerCase().includes(search.toLowerCase()));
+      filteredData.push({ ...section, cards: filteredCards });
+
+      setData(filteredData);
+
+    }
+    
+  }
+  
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="h-min-screen w-full scroll-auto">
+      {/* 搜索栏 */}
+      <div className="flex flex-col items-center justify-center w-full h-64">
+        <p>搜索本站内容</p>
+        <div className="flex flex-row items-center justify-center w-3/4 mt-2 gap-2">
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="输入搜索内容"
+            className="w-1/2 h-10 rounded-md border-2 border-gray-300 p-2"
+          />
+          <button className="h-10 rounded-md bg-blue-500 text-white px-4"
+            onClick={handleSearch}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            搜索
+          </button>
         </div>
-      </main>
+      </div>   
+
+      {/* 热门工具 */}
+      <div >
+        {
+          data.map((section: any) => (
+            <div className="w-full flex flex-col"
+            id={section.title}
+            key={section.title}
+            >
+              <p
+              className="text-2xl font-bold mt-4 ml-4">
+                {section.title}
+              </p>
+              <div className="flex flex-row flex-wrap w-full">
+              {/* 一张卡片 */} 
+                {
+                  section.cards.map((card: any) => (
+                    <Link 
+                    href={`/card/${card.id}`} 
+                    className="h-32 w-full sm:1/2 lg:w-1/5 p-4" 
+                    key={card.id}
+                    >
+                      <div className="h-full w-full bg-gray-50 rounded-lg flex flex-row flex-wrap items-center">
+                        <div className="w-2/5 flex items-center justify-center">
+                          <Image
+                            src={`/img/${card.img}`}
+                            alt={card.name}
+                            width={60}
+                            height={60}
+                            className="rounded-lg"
+                          />
+                        </div>
+                        <div className="flex flex-col w-3/5 p-2">
+                          <p className="text-xs lg:text-lg font-bold line-clamp-1">{card.name}</p>
+                          <p className="text-xs lg:text-sm line-clamp-2 text-gray-500">{card.description}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))
+                }
+              </div>
+            </div>
+          ))
+        }
+
+      </div>
+
+      {/* footer */}
+      <div className="w-full h-screen flex flex-col items-center justify-end">
+        <p className="text-gray-500 mb-4">Copyright © 2025 My Website. All rights reserved.</p>
+      </div >
+
     </div>
   );
 }
