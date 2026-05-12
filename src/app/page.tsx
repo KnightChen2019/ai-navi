@@ -1,103 +1,142 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import rawData from "../../data.json";
 import Link from "next/link";
+import SearchIcon from "@mui/icons-material/Search";
+import VisitorCounter from "@/components/VisitorCounter";
 
+interface Card {
+  id: string;
+  name: string;
+  img: string;
+  link: string;
+  description: string;
+}
+interface Section {
+  title: string;
+  cards: Card[];
+}
+
+const sections = rawData as Section[];
 
 export default function Home() {
-
   const [search, setSearch] = useState("");
-  const [data, setData] = useState(rawData);
-  
-  const handleSearch = () => {
-    const filteredData = []
-    for (const section of rawData){
-      if (!section.cards.some((card: any) => 
-        card.name.toLowerCase().includes(search.toLowerCase()))){
-        continue
-      }
-      const filteredCards = section.cards.filter((card: any) => 
-        card.name.toLowerCase().includes(search.toLowerCase()));
-      filteredData.push({ ...section, cards: filteredCards });
 
-      setData(filteredData);
+  const data = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return sections;
+    return sections
+      .map((s) => ({
+        ...s,
+        cards: s.cards.filter(
+          (c) =>
+            c.name.toLowerCase().includes(q) ||
+            c.description.toLowerCase().includes(q)
+        ),
+      }))
+      .filter((s) => s.cards.length > 0);
+  }, [search]);
 
-    }
-    
-  }
-  
   return (
-    <div className="h-min-screen w-full scroll-auto">
-      {/* 搜索栏 */}
-      <div className="flex flex-col items-center justify-center w-full h-64">
-        <p>搜索本站内容</p>
-        <div className="flex flex-row items-center justify-center w-3/4 mt-2 gap-2">
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="输入搜索内容"
-            className="w-1/2 h-10 rounded-md border-2 border-gray-300 p-2"
-          />
-          <button className="h-10 rounded-md bg-blue-500 text-white px-4"
-            onClick={handleSearch}
-          >
-            搜索
-          </button>
-        </div>
-      </div>   
+    <div className="w-full">
+      {/* Hero */}
+      <section
+        id="hero"
+        className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50"
+      >
+        <div className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            发现优质 AI 工具
+          </h1>
+          <p className="mt-4 text-slate-500">
+            精选对话、写作、绘画、编程、Agent 等领域的 AI 应用
+          </p>
 
-      {/* 热门工具 */}
-      <div >
-        {
-          data.map((section: any) => (
-            <div className="w-full flex flex-col"
-            id={section.title}
-            key={section.title}
-            >
-              <p
-              className="text-2xl font-bold mt-4 ml-4">
-                {section.title}
-              </p>
-              <div className="flex flex-row flex-wrap w-full">
-              {/* 一张卡片 */} 
-                {
-                  section.cards.map((card: any) => (
-                    <Link 
-                    href={`/card/${card.id}`} 
-                    className="h-32 w-full sm:1/2 lg:w-1/5 p-4" 
-                    key={card.id}
-                    >
-                      <div className="h-full w-full bg-gray-50 rounded-lg flex flex-row flex-wrap items-center">
-                        <div className="w-2/5 flex items-center justify-center">
-                          <Image
-                            src={`/img/${card.img}`}
-                            alt={card.name}
-                            width={60}
-                            height={60}
-                            className="rounded-lg"
-                          />
-                        </div>
-                        <div className="flex flex-col w-3/5 p-2">
-                          <p className="text-xs lg:text-lg font-bold line-clamp-1">{card.name}</p>
-                          <p className="text-xs lg:text-sm line-clamp-2 text-gray-500">{card.description}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))
-                }
-              </div>
+          <div className="mt-8 flex justify-center">
+            <div className="flex items-center w-full max-w-xl bg-white rounded-2xl shadow-md ring-1 ring-slate-200 focus-within:ring-2 focus-within:ring-indigo-400 transition">
+              <SearchIcon className="ml-4 text-slate-400" />
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="搜索工具名称或描述..."
+                className="flex-1 h-12 px-3 bg-transparent outline-none text-slate-800 placeholder:text-slate-400"
+              />
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  className="mr-2 px-3 py-1 text-sm text-slate-400 hover:text-slate-600"
+                >
+                  清除
+                </button>
+              )}
             </div>
-          ))
-        }
+          </div>
+        </div>
+      </section>
 
+      {/* Sections */}
+      <div className="max-w-7xl mx-auto px-6 py-10 space-y-12">
+        {data.length === 0 && (
+          <p className="text-center text-slate-400 py-20">
+            没有找到匹配 “{search}” 的工具
+          </p>
+        )}
+
+        {data.map((section) => (
+          <section key={section.title} id={section.title} className="scroll-mt-6">
+            <div className="flex items-baseline gap-3 mb-4">
+              <h2 className="text-xl font-bold text-slate-800">{section.title}</h2>
+              <span className="text-xs text-slate-400">{section.cards.length} 个工具</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {section.cards.map((card) => (
+                <Link
+                  href={`/card/${card.id}`}
+                  key={card.id}
+                  className="group bg-white rounded-2xl p-4 ring-1 ring-slate-200/70 hover:ring-indigo-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                >
+                  <div className="flex items-start gap-3">
+                    <Image
+                      src={`/img/${card.img}`}
+                      alt={card.name}
+                      width={48}
+                      height={48}
+                      className="rounded-xl shrink-0"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-semibold text-slate-800 truncate group-hover:text-indigo-600 transition-colors">
+                        {card.name}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
 
-      {/* footer */}
-      <div className="w-full h-screen flex flex-col items-center justify-end">
-        <p className="text-gray-500 mb-4">Copyright © 2025 My Website. All rights reserved.</p>
-      </div >
-
+      <footer className="border-t border-slate-200 mt-10 py-6 text-sm text-slate-400">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:justify-between gap-3 text-center">
+          <div>Copyright © 2025 AI Navi. All rights reserved.</div>
+          <div>
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-600 transition-colors"
+            >
+              鄂ICP备2026023010号-1
+            </a>
+          </div>
+          <VisitorCounter />
+        </div>
+      </footer>
     </div>
   );
 }

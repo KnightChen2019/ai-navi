@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import ChatIcon from '@mui/icons-material/Chat';
 import EditNoteIcon from '@mui/icons-material/EditNote';
@@ -10,110 +9,68 @@ import BrushIcon from '@mui/icons-material/Brush';
 import AnnouncementIcon from '@mui/icons-material/Announcement';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import { useRouter } from 'next/navigation';
 
+const items = [
+  { id: 'AI热门工具', label: 'AI热门工具', Icon: WhatshotIcon },
+  { id: 'AI对话聊天', label: 'AI对话聊天', Icon: ChatIcon },
+  { id: 'AI文本工具', label: 'AI文本工具', Icon: EditNoteIcon },
+  { id: 'AI编程工具', label: 'AI编程工具', Icon: CodeIcon },
+  { id: 'AI绘画', label: 'AI绘画', Icon: BrushIcon },
+  { id: 'AI新闻', label: 'AI新闻', Icon: AnnouncementIcon },
+  { id: '大模型API', label: '大模型API', Icon: DeviceHubIcon },
+  { id: 'Agent工具', label: 'Agent工具', Icon: PsychologyAltIcon },
+];
 
-type Props = {}
+const Navbar = () => {
+  const router = useRouter();
 
-
-const Navbar = (props: Props) => {
-
-    const router = useRouter()
-
-    const handleClick = (text: string) => {
-        if (window.location.pathname === `/`){
-            const element = document.getElementById(text)
-            element?.scrollIntoView({ behavior: 'smooth' })
-        }else{
-            router.push(`/`)
-            setTimeout(() => {
-                const element = document.getElementById(text)
-                element?.scrollIntoView({ behavior: 'smooth' })
-            }, 300)
-        }
+  const handleClick = (anchor: string) => {
+    if (window.location.pathname === '/') {
+      document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push('/');
+      setTimeout(() => {
+        document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
     }
-    
+  };
+
   return (
-    <div className='w-60 h-screen bg-slate-300 flex flex-col items-center gap-4 fixed'>
-        <div className='mt-6 w-3/4 h-full flex flex-col gap-8'>
-            <div className='flex items-center gap-2'
-                onClick={() => handleClick('/')}
-                >
-                <FormatColorTextIcon className='h-10 w-10 bg-white rounded-full p-1' />
-                <p className='text-xl font-bold'>AI导航站</p>
-            </div>
-            {/* menu */}
-            <div className='flex flex-col items-center justify-center w-3/4 gap-6'>
-                    {/* 第一行 */}
-                    <div
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                        onClick={() => handleClick('AI热门工具')}
-                    >
-                        <WhatshotIcon />
-                        <p className='tracking-widest'>AI热门工具</p>
-                    </div>
-
-
-                    <div
-                        onClick={() => handleClick('AI对话聊天')}
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                    >
-                        <ChatIcon />
-                        <p className="tracking-widest">AI对话聊天</p>
-                    </div>
-
-                    <div
-                        onClick={() => handleClick('AI文本工具')}
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                    >
-                        <EditNoteIcon />
-                        <p className="tracking-widest select-none">AI文本工具</p>
-                    </div>
-
-                    <div
-                        onClick={() => handleClick('AI编程工具')}
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                    >
-                        <CodeIcon />
-                        <p className="tracking-widest select-none">AI编程工具</p>
-                    </div>
-
-                    <div
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                        onClick={() => handleClick('AI绘画')}
-                    >
-                        <BrushIcon />
-                        <p className="tracking-widest select-none">AI绘画</p>
-                    </div>
-
-                    <div
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                        onClick={() => handleClick('AI新闻')}
-                    >
-                        <AnnouncementIcon />
-                        <p className="tracking-widest select-none">AI新闻</p>
-                    </div>
-
-                    <div
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                        onClick={() => handleClick('大模型API')}
-                    >
-                        <DeviceHubIcon />
-                        <p className="tracking-widest select-none">大模型API</p>
-                    </div>
-
-                    <div
-                        className='flex w-full h-10 items-center gap-4 cursor-pointer'
-                        onClick={() => handleClick('Agent工具')}
-                    >
-                        <PsychologyAltIcon />
-                        <p className="tracking-widest select-none">Agent工具</p>
-                    </div>
-
-                </div>
+    <aside className="group fixed left-0 top-0 z-30 h-screen w-16 hover:w-56 transition-all duration-200 bg-white/80 backdrop-blur border-r border-slate-200 flex flex-col overflow-hidden">
+      <button
+        onClick={() => handleClick('hero')}
+        className="flex items-center gap-3 h-16 px-4 border-b border-slate-100 cursor-pointer"
+      >
+        <div className="h-9 w-9 shrink-0 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white flex items-center justify-center shadow-sm">
+          <AutoAwesomeIcon fontSize="small" />
         </div>
-    </div>
-  )
-}
+        <span className="whitespace-nowrap font-semibold text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity">
+          AI 导航站
+        </span>
+      </button>
 
-export default Navbar
+      <nav className="flex-1 py-3 flex flex-col gap-1">
+        {items.map(({ id, label, Icon }) => (
+          <button
+            key={id}
+            onClick={() => handleClick(id)}
+            className="mx-2 flex items-center gap-3 h-10 px-3 rounded-lg text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors cursor-pointer"
+          >
+            <Icon fontSize="small" className="shrink-0" />
+            <span className="whitespace-nowrap text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              {label}
+            </span>
+          </button>
+        ))}
+      </nav>
+
+      <div className="px-4 py-3 text-[11px] text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        © 2025 AI Navi
+      </div>
+    </aside>
+  );
+};
+
+export default Navbar;
