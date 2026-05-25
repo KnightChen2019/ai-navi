@@ -1,90 +1,102 @@
-'use client'
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { getCardById, getRelatedCards } from "@/lib/data";
 
-import { useParams, useRouter } from 'next/navigation'
-import React from 'react'
-import rawData from '../../../../data.json'
-import Image from 'next/image'
-import Link from 'next/link'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-
-interface Card {
-  id: string
-  name: string
-  img: string
-  link: string
-  description: string
-}
-interface Section {
-  title: string
-  cards: Card[]
+interface PageProps {
+  params: Promise<{ card_id: string }>;
 }
 
-const sections = rawData as Section[]
+export default async function CardDetail({ params }: PageProps) {
+  const { card_id } = await params;
+  const card = getCardById(card_id);
+  if (!card) notFound();
 
-const CardDetail = () => {
-  const params = useParams()
-  const router = useRouter()
-  const card_id = params.card_id as string
-
-  let category = ''
-  let cardData: Card | undefined
-  for (const s of sections) {
-    const found = s.cards.find((c) => c.id === card_id)
-    if (found) {
-      cardData = found
-      category = s.title
-      break
-    }
-  }
-
-  if (!cardData) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
-        <p className="text-slate-500">未找到该工具</p>
-        <Link href="/" className="text-indigo-600 hover:underline">返回首页</Link>
-      </div>
-    )
-  }
+  const related = getRelatedCards(card_id, 4);
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="max-w-3xl mx-auto px-6 py-10">
-        <button
-          onClick={() => router.back()}
-          className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-indigo-600 mb-6"
-        >
-          <ArrowBackIcon fontSize="small" /> 返回
-        </button>
+    <div className="mx-auto max-w-4xl px-2">
+      <Link
+        href="/"
+        className="glass-subtle mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-cyan-300 transition-colors"
+      >
+        <ArrowBackIcon style={{ fontSize: 14 }} /> 返回
+      </Link>
 
-        <div className="bg-white rounded-2xl ring-1 ring-slate-200 p-8 shadow-sm">
-          <div className="flex items-center gap-5">
-            <Image
-              src={`/img/${cardData.img}`}
-              alt={cardData.name}
-              width={80}
-              height={80}
-              className="rounded-2xl ring-1 ring-slate-200"
-            />
-            <div className="flex-1 min-w-0">
-              <p className="text-xs text-indigo-600 font-medium">{category}</p>
-              <h1 className="text-2xl font-bold text-slate-800 mt-1">{cardData.name}</h1>
-            </div>
-            <Link
-              href={cardData.link}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white text-sm px-4 py-2 rounded-xl shadow-sm transition-colors"
-            >
-              <OpenInNewIcon fontSize="small" /> 访问官网
-            </Link>
+      {/* Main card */}
+      <div className="glass-medium relative overflow-hidden rounded-3xl p-8">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -top-16 -right-16 h-60 w-60 rounded-full bg-gradient-to-br from-cyan-400/30 to-indigo-500/30 blur-3xl"
+        />
+        <div className="flex items-start gap-6 relative">
+          <Image
+            src={`/img/${card.img}`}
+            alt={card.name}
+            width={80}
+            height={80}
+            className="rounded-2xl ring-1 ring-white/70 dark:ring-white/10 shrink-0"
+          />
+          <div className="flex-1 min-w-0">
+            <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-indigo-700 dark:text-cyan-300">
+              {card.section}
+            </span>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+              {card.name}
+            </h1>
           </div>
-
-          <p className="mt-6 text-slate-600 leading-relaxed">{cardData.description}</p>
+          <Link
+            href={card.link}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-500 px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/40 transition-shadow shrink-0"
+          >
+            <OpenInNewIcon style={{ fontSize: 16 }} /> 访问官网
+          </Link>
         </div>
-      </div>
-    </div>
-  )
-}
 
-export default CardDetail
+        <p className="mt-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
+          {card.description}
+        </p>
+      </div>
+
+      {/* Related */}
+      {related.length > 0 && (
+        <section className="mt-10">
+          <h2 className="mb-3 px-1 text-[14px] font-bold text-slate-900 dark:text-slate-100">
+            同类推荐
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            {related.map((c) => (
+              <Link
+                key={c.id}
+                href={`/card/${c.id}`}
+                className="glass-subtle card-hover-ring group block rounded-2xl p-3.5 transition-all hover:-translate-y-0.5"
+              >
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={`/img/${c.img}`}
+                    alt={c.name}
+                    width={40}
+                    height={40}
+                    className="rounded-xl ring-1 ring-white/60 dark:ring-white/10 shrink-0"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate group-hover:text-brand-gradient transition-colors">
+                      {c.name}
+                    </p>
+                    <p className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">
+                      {c.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
