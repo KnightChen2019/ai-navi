@@ -5,21 +5,22 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useState,
+  useSyncExternalStore,
 } from "react";
 
 export type Theme = "light" | "dark" | "system";
 
 interface ThemeContextValue {
-  theme: Theme;          // user's stored preference
-  resolved: "light" | "dark"; // effective theme right now
+  theme: Theme;
+  resolved: "light" | "dark";
   setTheme: (t: Theme) => void;
-  cycleTheme: () => void; // light → dark → system → light
+  cycleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const STORAGE_KEY = "ai-navi-theme";
+const THEME_EVENT = "ai-navi:theme-change";
 
 function readStored(): Theme {
   if (typeof window === "undefined") return "system";
@@ -39,39 +40,45 @@ function applyClass(resolved: "light" | "dark") {
   else root.classList.remove("dark");
 }
 
+function subscribeTheme(callback: () => void): () => void {
+  if (typeof window === "undefined") return () => {};
+  window.addEventListener(THEME_EVENT, callback);
+  return () => window.removeEventListener(THEME_EVENT, callback);
+}
+
+function subscribeSystemDark(callback: () => void): () => void {
+  if (typeof window === "undefined") return () => {};
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  mq.addEventListener("change", callback);
+  return () => mq.removeEventListener("change", callback);
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default to "system" until effect runs — matches the anti-flash script.
-  const [theme, setThemeState] = useState<Theme>("system");
-  const [resolved, setResolved] = useState<"light" | "dark">("light");
+  const theme = useSyncExternalStore<Theme>(
+    subscribeTheme,
+    readStored,
+    () => "system"
+  );
 
-  // On mount, sync from localStorage (anti-flash script already set <html> class)
-  useEffect(() => {
-    const stored = readStored();
-    setThemeState(stored);
-    const effective = stored === "system" ? (systemPrefersDark() ? "dark" : "light") : stored;
-    setResolved(effective);
-    applyClass(effective);
-  }, []);
+  const systemDark = useSyncExternalStore<boolean>(
+    subscribeSystemDark,
+    systemPrefersDark,
+    () => false
+  );
 
-  // React to system changes when in "system" mode
+  const resolved: "light" | "dark" =
+    theme === "system" ? (systemDark ? "dark" : "light") : theme;
+
+  // Keep <html class="dark"> in sync with resolved. The anti-flash inline
+  // script in layout.tsx sets the correct class before this runs, so the
+  // first call here is a no-op and there's no flicker.
   useEffect(() => {
-    if (theme !== "system") return;
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = (e: MediaQueryListEvent) => {
-      const eff = e.matches ? "dark" : "light";
-      setResolved(eff);
-      applyClass(eff);
-    };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, [theme]);
+    applyClass(resolved);
+  }, [resolved]);
 
   const setTheme = useCallback((t: Theme) => {
-    setThemeState(t);
     window.localStorage.setItem(STORAGE_KEY, t);
-    const eff = t === "system" ? (systemPrefersDark() ? "dark" : "light") : t;
-    setResolved(eff);
-    applyClass(eff);
+    window.dispatchEvent(new Event(THEME_EVENT));
   }, []);
 
   const cycleTheme = useCallback(() => {
