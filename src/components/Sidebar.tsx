@@ -10,7 +10,6 @@ import BrushIcon from "@mui/icons-material/Brush";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
 import DeviceHubIcon from "@mui/icons-material/DeviceHub";
 import PsychologyAltIcon from "@mui/icons-material/PsychologyAlt";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import VisitorCounter from "./VisitorCounter";
 
 const items = [
@@ -55,6 +54,7 @@ export default function Sidebar() {
             <button
               key={id}
               onClick={() => handleClick(id)}
+              aria-current={isActive ? "page" : undefined}
               className={[
                 "relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
                 isActive
