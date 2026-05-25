@@ -19,14 +19,16 @@ export interface CardWithSection extends Card {
 
 const sections = rawData as Section[];
 
+const allCards: CardWithSection[] = sections.flatMap((s) =>
+  s.cards.map((c) => ({ ...c, section: s.title }))
+);
+
 export function getSections(): Section[] {
   return sections;
 }
 
 export function getAllCards(): CardWithSection[] {
-  return sections.flatMap((s) =>
-    s.cards.map((c) => ({ ...c, section: s.title }))
-  );
+  return allCards;
 }
 
 export function getCardById(id: string): CardWithSection | undefined {
