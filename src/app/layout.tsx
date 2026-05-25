@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Topbar from "@/components/Topbar";
 import Sidebar from "@/components/Sidebar";
+import CommandPalette from "@/components/CommandPalette";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -42,6 +43,7 @@ export default function RootLayout({
           <div className="aurora-bg" aria-hidden />
           <Topbar />
           <Sidebar />
+          <CommandPalette />
           <main className="relative z-10 ml-[232px] mr-4 pt-[86px] pb-8 pl-2">
             {children}
           </main>
