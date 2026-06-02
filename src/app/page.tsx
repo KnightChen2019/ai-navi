@@ -1,33 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import { getSections, getAllCards, type Card } from "@/lib/data";
+import { getSections, getAllCards } from "@/lib/data";
+import ToolCard from "@/components/ToolCard";
+import TrendingRail from "@/components/TrendingRail";
 
-function CardItem({ card }: { card: Card }) {
-  return (
-    <Link
-      href={`/card/${card.id}`}
-      className="card-hover-ring group glass-subtle block rounded-2xl p-4 transition-all hover:-translate-y-0.5"
-    >
-      <div className="flex items-start gap-3">
-        <Image
-          src={`/img/${card.img}`}
-          alt={card.name}
-          width={40}
-          height={40}
-          className="rounded-xl shrink-0 ring-1 ring-white/60 dark:ring-white/10"
-        />
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate group-hover:text-brand-gradient transition-colors">
-            {card.name}
-          </p>
-          <p className="mt-1 text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
-            {card.description}
-          </p>
-        </div>
-      </div>
-    </Link>
-  );
-}
+export const dynamic = "force-dynamic"; // 本周热门按请求读文件
 
 export default function Home() {
   const sections = getSections();
@@ -49,6 +25,9 @@ export default function Home() {
         </p>
       </section>
 
+      {/* 本周热门 */}
+      <TrendingRail />
+
       {/* Sections */}
       <div className="space-y-10">
         {sections.map((section) => (
@@ -64,7 +43,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {section.cards.map((c) => (
-                <CardItem key={c.id} card={c} />
+                <ToolCard key={c.id} card={c} />
               ))}
             </div>
           </section>
