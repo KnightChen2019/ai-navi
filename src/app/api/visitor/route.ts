@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
+import { withLock, atomicWriteJson } from "@/lib/file-store";
 
 export const dynamic = "force-dynamic";
 
@@ -44,24 +45,7 @@ async function readState(): Promise<CounterState> {
 }
 
 async function writeState(state: CounterState): Promise<void> {
-  await fs.mkdir(dataDir, { recursive: true });
-  // Atomic write: stage to a temp file then rename so a crash mid-write can't
-  // leave a truncated/corrupt JSON file behind.
-  const tmp = `${counterFile}.tmp`;
-  await fs.writeFile(tmp, JSON.stringify(state), "utf-8");
-  await fs.rename(tmp, counterFile);
-}
-
-// Serialize read-modify-write so concurrent POSTs in this process don't clobber
-// each other's increments. (Single-process standalone server assumed.)
-let chain: Promise<unknown> = Promise.resolve();
-function withLock<T>(fn: () => Promise<T>): Promise<T> {
-  const run = chain.then(fn, fn);
-  chain = run.then(
-    () => undefined,
-    () => undefined
-  );
-  return run;
+  await atomicWriteJson(counterFile, state);
 }
 
 export async function GET() {
