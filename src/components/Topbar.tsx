@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Sparkles, Menu } from "lucide-react";
+import { Search, Sparkles, Menu, Heart } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import { useFavorites } from "@/lib/useFavorites";
 
 export default function Topbar() {
+  const { count } = useFavorites();
+
   const openPalette = () => {
     window.dispatchEvent(new CustomEvent("ai-navi:open-palette"));
   };
@@ -48,7 +51,19 @@ export default function Topbar() {
         </span>
       </button>
 
-      <div className="ml-auto shrink-0">
+      <div className="ml-auto flex shrink-0 items-center gap-2">
+        <Link
+          href="/favorites"
+          aria-label={`我的收藏（${count}）`}
+          className="glass-subtle relative inline-flex h-9 w-9 items-center justify-center rounded-xl text-slate-600 transition-colors hover:text-brand dark:text-slate-300"
+        >
+          <Heart size={18} className={count > 0 ? "fill-current text-brand" : ""} />
+          {count > 0 && (
+            <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand px-1 text-[9px] font-bold text-white">
+              {count}
+            </span>
+          )}
+        </Link>
         <ThemeToggle />
       </div>
     </header>
