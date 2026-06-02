@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import OutboundVisitButton from "@/components/OutboundVisitButton";
+import FavoriteButton from "@/components/FavoriteButton";
+import ToolCard from "@/components/ToolCard";
 import { siteConfig } from "@/lib/site";
 import { getAllCards, getCardById, getRelatedCards } from "@/lib/data";
 
@@ -83,14 +86,14 @@ export default async function CardDetail({ params }: PageProps) {
               {card.name}
             </h1>
           </div>
-          <a
-            href={card.link}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex items-center gap-1.5 rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white shadow-sm hover:shadow-md transition-shadow shrink-0"
-          >
-            <ExternalLink size={16} /> 访问官网
-          </a>
+          <div className="flex shrink-0 items-center gap-2">
+            <FavoriteButton
+              toolId={card.id}
+              alwaysVisible
+              className="h-10 w-10 glass-subtle rounded-xl"
+            />
+            <OutboundVisitButton toolId={card.id} href={card.link} />
+          </div>
         </div>
 
         <p className="mt-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
@@ -106,29 +109,7 @@ export default async function CardDetail({ params }: PageProps) {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
             {related.map((c) => (
-              <Link
-                key={c.id}
-                href={`/card/${c.id}`}
-                className="glass-subtle card-hover-ring group block rounded-2xl p-3.5 transition-all hover:-translate-y-0.5"
-              >
-                <div className="flex items-center gap-3">
-                  <Image
-                    src={`/img/${c.img}`}
-                    alt={c.name}
-                    width={40}
-                    height={40}
-                    className="rounded-xl ring-1 ring-white/60 dark:ring-white/10 shrink-0"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate group-hover:text-brand-gradient transition-colors">
-                      {c.name}
-                    </p>
-                    <p className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">
-                      {c.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+              <ToolCard key={c.id} card={c} />
             ))}
           </div>
         </section>
