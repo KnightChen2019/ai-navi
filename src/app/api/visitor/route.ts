@@ -45,7 +45,23 @@ async function readState(): Promise<CounterState> {
 
 async function writeState(state: CounterState): Promise<void> {
   await fs.mkdir(dataDir, { recursive: true });
-  await fs.writeFile(counterFile, JSON.stringify(state), "utf-8");
+  // Atomic write: stage to a temp file then rename so a crash mid-write can't
+  // leave a truncated/corrupt JSON file behind.
+  const tmp = `${counterFile}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(state), "utf-8");
+  await fs.rename(tmp, counterFile);
+}
+
+// Serialize read-modify-write so concurrent POSTs in this process don't clobber
+// each other's increments. (Single-process standalone server assumed.)
+let chain: Promise<unknown> = Promise.resolve();
+function withLock<T>(fn: () => Promise<T>): Promise<T> {
+  const run = chain.then(fn, fn);
+  chain = run.then(
+    () => undefined,
+    () => undefined
+  );
+  return run;
 }
 
 export async function GET() {
@@ -58,16 +74,19 @@ export async function GET() {
 
 export async function POST() {
   const today = todayString();
-  const state = await readState();
-  if (state.today.date !== today) {
-    state.today = { date: today, count: 0 };
-  }
-  state.today.count += 1;
-  state.total += 1;
-  await writeState(state);
+  const result = await withLock(async () => {
+    const state = await readState();
+    if (state.today.date !== today) {
+      state.today = { date: today, count: 0 };
+    }
+    state.today.count += 1;
+    state.total += 1;
+    await writeState(state);
+    return state;
+  });
   return NextResponse.json({
     todayDate: today,
-    todayPosition: state.today.count,
-    totalCount: state.total,
+    todayPosition: result.today.count,
+    totalCount: result.total,
   });
 }

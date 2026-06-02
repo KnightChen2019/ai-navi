@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Navi · 精选 AI 工具导航站
 
-## Getting Started
+一个轻量的 AI 工具导航站，按场景（对话、写作、绘画、编程、Agent、大模型 API 等）收录并直达优质 AI 应用。基于 **Next.js App Router** 构建，玻璃拟态 UI、暗色模式、⌘K 命令面板、访客计数。
 
-First, run the development server:
+## 技术栈
+
+- **Next.js 16**（App Router，`output: "standalone"`）+ **React 19**
+- **Tailwind CSS 4**（设计 token 与玻璃拟态工具类见 `src/app/globals.css`）
+- **lucide-react** 图标
+- **TypeScript**
+
+## 本地开发
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 http://localhost:4000 （开发与生产端口均为 **4000**）。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 常用脚本
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| 命令 | 说明 |
+| --- | --- |
+| `npm run dev` | 启动开发服务器（:4000） |
+| `npm run build` | 先校验 `data.json`，再构建生产版本 |
+| `npm run start` | 运行生产构建（:4000） |
+| `npm run lint` | ESLint 检查 |
+| `npm run validate` | 校验 `data.json`（id 唯一、分类合法、图片存在等） |
 
-## Learn More
+## 环境变量
 
-To learn more about Next.js, take a look at the following resources:
+| 变量 | 说明 |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | 站点生产域名（如 `https://your-domain.com`）。用于 canonical、Open Graph、`sitemap.xml`、`robots.txt`。未设置时回退到 `http://localhost:4000`。 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 数据维护
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+所有工具数据集中在根目录 **`data.json`**，采用「唯一工具 + 多分类标签」结构：
 
-## Deploy on Vercel
+```jsonc
+{
+  "sections": ["AI热门工具", "AI对话聊天", "..."],   // 分类及展示顺序
+  "tools": [
+    {
+      "id": "doubao",                 // url-safe slug，作为 /card/<id> 路由与去重键
+      "name": "豆包",
+      "description": "抖音旗下AI助手",
+      "img": "doubao.jpg",            // 对应 public/img/doubao.jpg
+      "link": "https://doubao.com",
+      "sections": ["AI热门工具", "AI对话聊天"]   // 一个工具可属于多个分类
+    }
+  ]
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 新增工具：在 `tools` 里加一项，并把 logo 放到 `public/img/`。
+- 调整分类顺序：改 `sections` 数组顺序即可（侧边栏图标映射在 `src/components/Sidebar.tsx`）。
+- 提交前可运行 `npm run validate` 自检；`npm run build` 也会自动校验。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 部署（Docker）
+
+```bash
+docker build -t ai-navi .
+docker run -p 4000:3000 -e NEXT_PUBLIC_SITE_URL=https://your-domain.com ai-navi
+```
+
+> 访客计数写入容器内 `data/visitor-count.json`，依赖持久化文件系统；如部署到 Serverless 平台需改用外部存储（KV/数据库）。

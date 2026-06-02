@@ -15,11 +15,16 @@ const eslintConfig = defineConfig([
   ]),
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unused-vars": "off",
+      // Keep these visible (warn) rather than silently disabled, so issues
+      // surface in CI/editor without blocking the production build.
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
       "@typescript-eslint/no-empty-object-type": "off",
-      "prefer-const": "off"
-    }
+      "prefer-const": "warn",
+    },
   }
 ]);
 

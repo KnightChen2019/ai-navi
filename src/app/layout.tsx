@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Topbar from "@/components/Topbar";
 import Sidebar from "@/components/Sidebar";
@@ -10,8 +11,31 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI 导航站 · 精选 AI 工具集合",
-  description: "精选优质 AI 工具，覆盖对话、写作、绘画、编程、Agent 等场景。",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s · ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: ["AI 工具", "AI 导航", "人工智能", "AI 对话", "AI 绘画", "AI 编程", "大模型", "AI Agent"],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "zh_CN",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 // Anti-flash: runs before React hydration, sets the correct theme class
@@ -44,7 +68,7 @@ export default function RootLayout({
           <Topbar />
           <Sidebar />
           <CommandPalette />
-          <main className="relative z-10 ml-[232px] mr-4 pt-[86px] pb-8 pl-2">
+          <main className="relative z-10 px-3 pb-8 pt-[78px] md:ml-[232px] md:mr-4 md:px-0 md:pl-2 md:pt-[86px]">
             {children}
           </main>
         </ThemeProvider>

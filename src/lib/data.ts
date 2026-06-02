@@ -1,5 +1,15 @@
 import rawData from "../../data.json";
 
+/** A unique tool. The same tool can belong to several sections. */
+export interface Tool {
+  id: string;
+  name: string;
+  img: string;
+  link: string;
+  description: string;
+  sections: string[];
+}
+
 export interface Card {
   id: string;
   name: string;
@@ -13,32 +23,52 @@ export interface Section {
   cards: Card[];
 }
 
+/** A card flattened with a single representative section (its first). */
 export interface CardWithSection extends Card {
   section: string;
+  sections: string[];
 }
 
-const sections = rawData as Section[];
+interface RawData {
+  sections: string[];
+  tools: Tool[];
+}
 
-const allCards: CardWithSection[] = sections.flatMap((s) =>
-  s.cards.map((c) => ({ ...c, section: s.title }))
-);
+const data = rawData as RawData;
 
+function toCardWithSection(t: Tool): CardWithSection {
+  return { ...t, section: t.sections[0] };
+}
+
+/** Section titles in display order. */
+export function getSectionTitles(): string[] {
+  return data.sections;
+}
+
+/** Sections in display order, each populated with the tools that belong to it. */
 export function getSections(): Section[] {
-  return sections;
+  return data.sections.map((title) => ({
+    title,
+    cards: data.tools.filter((t) => t.sections.includes(title)),
+  }));
 }
 
+/** Every unique tool exactly once. */
 export function getAllCards(): CardWithSection[] {
-  return allCards;
+  return data.tools.map(toCardWithSection);
 }
 
 export function getCardById(id: string): CardWithSection | undefined {
-  return getAllCards().find((c) => c.id === id);
+  const t = data.tools.find((tool) => tool.id === id);
+  return t ? toCardWithSection(t) : undefined;
 }
 
+/** Tools sharing at least one section with the given tool. */
 export function getRelatedCards(id: string, limit = 4): CardWithSection[] {
-  const card = getCardById(id);
-  if (!card) return [];
-  return getAllCards()
-    .filter((c) => c.section === card.section && c.id !== id)
-    .slice(0, limit);
+  const tool = data.tools.find((t) => t.id === id);
+  if (!tool) return [];
+  return data.tools
+    .filter((t) => t.id !== id && t.sections.some((s) => tool.sections.includes(s)))
+    .slice(0, limit)
+    .map(toCardWithSection);
 }
