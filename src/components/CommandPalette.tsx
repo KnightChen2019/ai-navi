@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import SearchIcon from "@mui/icons-material/Search";
+import { Search } from "lucide-react";
 import { getAllCards, type CardWithSection } from "@/lib/data";
 
 export default function CommandPalette() {
@@ -115,11 +115,22 @@ export default function CommandPalette() {
     >
       <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-sm dark:bg-slate-950/60" />
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="搜索 AI 工具"
         className="glass-strong relative w-full max-w-[600px] overflow-hidden rounded-2xl"
         onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => {
+          // Trap focus inside the palette: arrow keys drive the list, so Tab
+          // simply keeps focus on the input rather than escaping the dialog.
+          if (e.key === "Tab") {
+            e.preventDefault();
+            inputRef.current?.focus();
+          }
+        }}
       >
-        <div className="flex items-center gap-3 border-b border-white/40 dark:border-white/10 px-4 py-3">
-          <SearchIcon style={{ fontSize: 18 }} className="text-slate-400" />
+        <div className="flex items-center gap-3 border-b border-[var(--border)] px-4 py-3">
+          <Search size={18} className="text-slate-400" />
           <input
             ref={inputRef}
             value={query}
@@ -160,8 +171,8 @@ export default function CommandPalette() {
                     className={[
                       "flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors",
                       isActive
-                        ? "bg-gradient-to-r from-cyan-500/15 to-indigo-500/15"
-                        : "hover:bg-white/40 dark:hover:bg-white/5",
+                        ? "bg-brand-soft"
+                        : "hover:bg-black/[0.04] dark:hover:bg-white/5",
                     ].join(" ")}
                   >
                     <Image

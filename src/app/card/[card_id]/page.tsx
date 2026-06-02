@@ -1,12 +1,37 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { getCardById, getRelatedCards } from "@/lib/data";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { siteConfig } from "@/lib/site";
+import { getAllCards, getCardById, getRelatedCards } from "@/lib/data";
 
 interface PageProps {
   params: Promise<{ card_id: string }>;
+}
+
+// Pre-render every tool page at build time (better SEO + instant loads).
+export function generateStaticParams() {
+  return getAllCards().map((c) => ({ card_id: c.id }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { card_id } = await params;
+  const card = getCardById(card_id);
+  if (!card) return { title: "未找到工具" };
+  const path = `/card/${card.id}`;
+  return {
+    title: `${card.name} — ${card.section}`,
+    description: card.description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      title: `${card.name} · ${siteConfig.name}`,
+      description: card.description,
+      url: `${siteConfig.url.replace(/\/$/, "")}${path}`,
+      images: [{ url: `/img/${card.img}` }],
+    },
+  };
 }
 
 export default async function CardDetail({ params }: PageProps) {
@@ -16,22 +41,33 @@ export default async function CardDetail({ params }: PageProps) {
 
   const related = getRelatedCards(card_id, 4);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: card.name,
+    description: card.description,
+    applicationCategory: card.section,
+    url: card.link,
+    image: `${siteConfig.url.replace(/\/$/, "")}/img/${card.img}`,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "CNY" },
+  };
+
   return (
     <div className="mx-auto max-w-4xl px-2">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/"
-        className="glass-subtle mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-cyan-300 transition-colors"
+        className="glass-subtle mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs text-slate-600 dark:text-slate-300 hover:text-brand transition-colors"
       >
-        <ArrowBackIcon style={{ fontSize: 14 }} /> 返回
+        <ArrowLeft size={14} /> 返回
       </Link>
 
       {/* Main card */}
-      <div className="glass-medium relative overflow-hidden rounded-3xl p-8">
-        <span
-          aria-hidden
-          className="pointer-events-none absolute -top-16 -right-16 h-60 w-60 rounded-full bg-gradient-to-br from-cyan-400/30 to-indigo-500/30 blur-3xl"
-        />
-        <div className="flex items-start gap-6 relative">
+      <div className="glass-medium relative overflow-hidden rounded-3xl p-5 sm:p-8">
+        <div className="relative flex flex-wrap items-start gap-4 sm:gap-6">
           <Image
             src={`/img/${card.img}`}
             alt={card.name}
@@ -40,21 +76,21 @@ export default async function CardDetail({ params }: PageProps) {
             className="rounded-2xl ring-1 ring-white/70 dark:ring-white/10 shrink-0"
           />
           <div className="flex-1 min-w-0">
-            <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-indigo-700 dark:text-cyan-300">
+            <span className="inline-flex items-center rounded-full bg-brand-soft px-2.5 py-0.5 text-[11px] font-semibold text-brand">
               {card.section}
             </span>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
               {card.name}
             </h1>
           </div>
-          <Link
+          <a
             href={card.link}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-500 px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/40 transition-shadow shrink-0"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white shadow-sm hover:shadow-md transition-shadow shrink-0"
           >
-            <OpenInNewIcon style={{ fontSize: 16 }} /> 访问官网
-          </Link>
+            <ExternalLink size={16} /> 访问官网
+          </a>
         </div>
 
         <p className="mt-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
