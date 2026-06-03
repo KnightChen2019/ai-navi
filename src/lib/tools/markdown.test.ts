@@ -67,6 +67,11 @@ describe("mdToHtml", () => {
     expect(html).not.toContain("javascript:");
   });
 
+  it("sanitizeUrl 抵御 TAB 混淆与大小写绕过", () => {
+    expect(mdToHtml("[a](java\tscript:alert)")).toContain('<a href="#">a</a>');
+    expect(mdToHtml("[b](JAVASCRIPT:alert)")).toContain('<a href="#">b</a>');
+  });
+
   it("XSS：原始 HTML 被转义为纯文本", () => {
     const html = mdToHtml("<script>alert(1)</script>");
     expect(html).not.toContain("<script>");

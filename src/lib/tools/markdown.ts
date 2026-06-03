@@ -10,7 +10,9 @@ function escapeHtml(s: string): string {
 
 /** 只放行 http/https/mailto 与相对路径/锚点；其余协议（javascript: 等）→ "#"。 */
 function sanitizeUrl(url: string): string {
-  const u = url.trim();
+  // 浏览器解析 URL 前会剥除 TAB/LF/CR（及 NUL），故先剥除再判协议，
+  // 否则 "java\tscript:" 之类可绕过协议白名单造成 XSS。
+  const u = url.replace(/[ \t\n\r]/g, "").trim();
   const scheme = u.match(/^([a-z][a-z0-9+.-]*):/i);
   if (scheme) {
     const s = scheme[1].toLowerCase();
