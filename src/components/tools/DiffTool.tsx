@@ -3,26 +3,26 @@
 import { useState } from "react";
 import { diffLines, type DiffResult } from "@/lib/tools/text-diff";
 
+const AREA =
+  "glass-subtle h-56 w-full resize-y rounded-xl p-3 font-mono text-[13px] outline-none";
+
+function rowClass(type: "eq" | "add" | "del", side: "left" | "right") {
+  if (type === "eq") return "";
+  if (type === "del" && side === "left") return "bg-red-500/10 text-red-700 dark:text-red-300";
+  if (type === "add" && side === "right") return "bg-green-500/10 text-green-700 dark:text-green-300";
+  return "opacity-40";
+}
+
 export default function DiffTool() {
   const [a, setA] = useState("");
   const [b, setB] = useState("");
   const [result, setResult] = useState<DiffResult | null>(null);
 
-  const area =
-    "glass-subtle h-56 w-full resize-y rounded-xl p-3 font-mono text-[13px] outline-none";
-
-  function rowClass(type: "eq" | "add" | "del", side: "left" | "right") {
-    if (type === "eq") return "";
-    if (type === "del" && side === "left") return "bg-red-500/10 text-red-700 dark:text-red-300";
-    if (type === "add" && side === "right") return "bg-green-500/10 text-green-700 dark:text-green-300";
-    return "opacity-40";
-  }
-
   return (
     <div className="space-y-3">
       <div className="grid gap-3 md:grid-cols-2">
-        <textarea value={a} onChange={(e) => setA(e.target.value)} placeholder="旧文本…" spellCheck={false} className={area} />
-        <textarea value={b} onChange={(e) => setB(e.target.value)} placeholder="新文本…" spellCheck={false} className={area} />
+        <textarea value={a} onChange={(e) => setA(e.target.value)} placeholder="旧文本…" spellCheck={false} className={AREA} />
+        <textarea value={b} onChange={(e) => setB(e.target.value)} placeholder="新文本…" spellCheck={false} className={AREA} />
       </div>
 
       <div className="flex items-center gap-3">

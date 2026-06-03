@@ -19,7 +19,7 @@ const SETS = {
 };
 
 // 易混淆字符：去掉后视觉更清晰
-const AMBIGUOUS = new Set("O0oIl1|`'\"".split(""));
+const AMBIGUOUS = new Set("O0oIl1".split(""));
 
 const defaultRandom: RandomBytes = (n) => {
   const a = new Uint8Array(n);

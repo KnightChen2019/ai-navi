@@ -50,10 +50,10 @@ export default function JsonTool() {
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap gap-2">
-        <button className={BTN} onClick={() => run("beautify")}>美化</button>
-        <button className={BTN} onClick={() => run("minify")}>压缩</button>
-        <button className={BTN} onClick={() => run("escape")}>转义</button>
-        <button className={BTN} onClick={() => run("unescape")}>反转义</button>
+        <button type="button" className={BTN} onClick={() => run("beautify")}>美化</button>
+        <button type="button" className={BTN} onClick={() => run("minify")}>压缩</button>
+        <button type="button" className={BTN} onClick={() => run("escape")}>转义</button>
+        <button type="button" className={BTN} onClick={() => run("unescape")}>反转义</button>
       </div>
 
       <div className="grid gap-3 md:grid-cols-2">

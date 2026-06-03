@@ -68,6 +68,8 @@ export default function Sidebar() {
     return () => observer.disconnect();
   }, [pathname]);
 
+  const isToolsActive = pathname.startsWith("/tools");
+
   const handleClick = (anchor: string) => {
     setActive(anchor);
     setMobileOpen(false);
@@ -138,39 +140,34 @@ export default function Sidebar() {
         </nav>
 
         <div className="mt-auto border-t border-slate-200/60 pt-2 dark:border-white/10">
-          {(() => {
-            const isToolsActive = pathname.startsWith("/tools");
-            return (
-              <button
-                onClick={() => {
-                  setMobileOpen(false);
-                  router.push("/tools");
-                }}
-                aria-current={isToolsActive ? "page" : undefined}
-                className={[
-                  "relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
-                  isToolsActive
-                    ? "bg-brand-soft text-brand border border-brand-soft"
-                    : "text-slate-600 hover:bg-black/[0.04] dark:text-slate-300 dark:hover:bg-white/5",
-                ].join(" ")}
-              >
-                {isToolsActive && (
-                  <span className="absolute -left-3 top-1/2 h-1/2 w-[3px] -translate-y-1/2 rounded-r bg-brand" />
-                )}
-                <span
-                  className={[
-                    "flex h-[18px] w-[18px] items-center justify-center rounded-md",
-                    isToolsActive
-                      ? "bg-brand text-white shadow-sm"
-                      : "bg-slate-900/5 text-slate-500 dark:bg-white/5 dark:text-slate-400",
-                  ].join(" ")}
-                >
-                  <Wrench size={12} />
-                </span>
-                实用工具
-              </button>
-            );
-          })()}
+          <button
+            onClick={() => {
+              setMobileOpen(false);
+              router.push("/tools");
+            }}
+            aria-current={isToolsActive ? "page" : undefined}
+            className={[
+              "relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
+              isToolsActive
+                ? "bg-brand-soft text-brand border border-brand-soft"
+                : "text-slate-600 hover:bg-black/[0.04] dark:text-slate-300 dark:hover:bg-white/5",
+            ].join(" ")}
+          >
+            {isToolsActive && (
+              <span className="absolute -left-3 top-1/2 h-1/2 w-[3px] -translate-y-1/2 rounded-r bg-brand" />
+            )}
+            <span
+              className={[
+                "flex h-[18px] w-[18px] items-center justify-center rounded-md",
+                isToolsActive
+                  ? "bg-brand text-white shadow-sm"
+                  : "bg-slate-900/5 text-slate-500 dark:bg-white/5 dark:text-slate-400",
+              ].join(" ")}
+            >
+              <Wrench size={12} />
+            </span>
+            实用工具
+          </button>
         </div>
 
         <div className="mt-2">
