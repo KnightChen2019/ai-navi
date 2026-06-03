@@ -4,7 +4,7 @@ import { Braces, KeyRound, GitCompare, Eye } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "实用工具",
-  description: "站内实用小工具：JSON 格式化、随机密码、文本比较，全部在浏览器本地运行。",
+  description: "站内实用小工具：JSON 格式化、随机密码、文本比较、Markdown 预览，全部在浏览器本地运行。",
 };
 
 const TOOLS = [

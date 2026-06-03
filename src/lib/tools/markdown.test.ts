@@ -72,6 +72,24 @@ describe("mdToHtml", () => {
     expect(mdToHtml("[b](JAVASCRIPT:alert)")).toContain('<a href="#">b</a>');
   });
 
+  it("拦截 data: 与 vbscript: 协议", () => {
+    expect(mdToHtml("[a](data:text/html,<script>1</script>)")).toContain('href="#"');
+    expect(mdToHtml("[b](vbscript:msgbox)")).toContain('<a href="#">b</a>');
+  });
+
+  it("链接/图片的属性注入被转义封死", () => {
+    // 引号在解析链接前已被转义，无法逃逸出 href/src/alt 属性
+    const link = mdToHtml('[t](https://a.com" onmouseover="alert(1))');
+    expect(link).not.toContain('onmouseover="alert(1)"');
+    const img = mdToHtml('![" onerror="alert(1)](https://a.com/i.png)');
+    expect(img).not.toContain('onerror="alert(1)"');
+  });
+
+  it("表格单元格内的危险链接也被拦截", () => {
+    const html = mdToHtml("| h |\n| - |\n| [x](javascript:alert) |");
+    expect(html).not.toContain("javascript:");
+  });
+
   it("XSS：原始 HTML 被转义为纯文本", () => {
     const html = mdToHtml("<script>alert(1)</script>");
     expect(html).not.toContain("<script>");
