@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Braces, KeyRound, GitCompare } from "lucide-react";
+import { Braces, KeyRound, GitCompare, Eye } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "实用工具",
@@ -11,6 +11,7 @@ const TOOLS = [
   { href: "/tools/json", Icon: Braces, name: "JSON 工具", desc: "美化、压缩、校验、转义 / 反转义" },
   { href: "/tools/password", Icon: KeyRound, name: "随机密码", desc: "可定制长度与字符集，批量生成" },
   { href: "/tools/diff", Icon: GitCompare, name: "文本比较", desc: "行级差异，并排高亮" },
+  { href: "/tools/markdown", Icon: Eye, name: "Markdown 预览", desc: "实时渲染，支持表格与任务列表" },
 ];
 
 export default function ToolsPage() {
