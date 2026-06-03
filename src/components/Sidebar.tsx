@@ -16,7 +16,11 @@ import {
 } from "lucide-react";
 import VisitorCounter from "./VisitorCounter";
 
-const items: { id: string; label: string; Icon: LucideIcon }[] = [
+// Scroll-anchor items jump to a homepage section; an item with `href` is a real
+// route navigation instead.
+type NavItem = { id: string; label: string; Icon: LucideIcon; href?: string };
+
+const items: NavItem[] = [
   { id: "AI热门工具", label: "AI 热门工具", Icon: Flame },
   { id: "AI对话聊天", label: "AI 对话聊天", Icon: MessageCircle },
   { id: "AI文本工具", label: "AI 文本工具", Icon: FileText },
@@ -25,6 +29,7 @@ const items: { id: string; label: string; Icon: LucideIcon }[] = [
   { id: "AI新闻", label: "AI 新闻", Icon: Megaphone },
   { id: "大模型API", label: "大模型 API", Icon: Share2 },
   { id: "Agent工具", label: "Agent 工具", Icon: Bot },
+  { id: "tools", label: "实用工具", Icon: Wrench, href: "/tools" },
 ];
 
 export default function Sidebar() {
@@ -68,17 +73,24 @@ export default function Sidebar() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const isToolsActive = pathname.startsWith("/tools");
+  // A route entry (e.g. 实用工具) owns the highlight whenever its route is active;
+  // while there, no scroll-anchor category is highlighted — so the two never
+  // light up at the same time.
+  const onToolsRoute = pathname.startsWith("/tools");
 
-  const handleClick = (anchor: string) => {
-    setActive(anchor);
+  const handleClick = (item: NavItem) => {
     setMobileOpen(false);
+    if (item.href) {
+      router.push(item.href);
+      return;
+    }
+    setActive(item.id);
     if (window.location.pathname === "/") {
-      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
     } else {
       router.push("/");
       setTimeout(() => {
-        document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
       }, 300);
     }
   };
@@ -106,12 +118,15 @@ export default function Sidebar() {
         </div>
 
         <nav className="flex flex-col gap-0.5">
-          {items.map(({ id, label, Icon }) => {
-            const isActive = id === active;
+          {items.map((item) => {
+            const { id, label, Icon, href } = item;
+            const isActive = href
+              ? pathname.startsWith(href)
+              : !onToolsRoute && id === active;
             return (
               <button
                 key={id}
-                onClick={() => handleClick(id)}
+                onClick={() => handleClick(item)}
                 aria-current={isActive ? "page" : undefined}
                 className={[
                   "relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
@@ -139,38 +154,7 @@ export default function Sidebar() {
           })}
         </nav>
 
-        <div className="mt-auto border-t border-slate-200/60 pt-2 dark:border-white/10">
-          <button
-            onClick={() => {
-              setMobileOpen(false);
-              router.push("/tools");
-            }}
-            aria-current={isToolsActive ? "page" : undefined}
-            className={[
-              "relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
-              isToolsActive
-                ? "bg-brand-soft text-brand border border-brand-soft"
-                : "text-slate-600 hover:bg-black/[0.04] dark:text-slate-300 dark:hover:bg-white/5",
-            ].join(" ")}
-          >
-            {isToolsActive && (
-              <span className="absolute -left-3 top-1/2 h-1/2 w-[3px] -translate-y-1/2 rounded-r bg-brand" />
-            )}
-            <span
-              className={[
-                "flex h-[18px] w-[18px] items-center justify-center rounded-md",
-                isToolsActive
-                  ? "bg-brand text-white shadow-sm"
-                  : "bg-slate-900/5 text-slate-500 dark:bg-white/5 dark:text-slate-400",
-              ].join(" ")}
-            >
-              <Wrench size={12} />
-            </span>
-            实用工具
-          </button>
-        </div>
-
-        <div className="mt-2">
+        <div className="mt-auto">
           <VisitorCounter />
         </div>
       </aside>
