@@ -11,6 +11,7 @@ import {
   Megaphone,
   Share2,
   Bot,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
 import VisitorCounter from "./VisitorCounter";
@@ -136,7 +137,35 @@ export default function Sidebar() {
           })}
         </nav>
 
-        <div className="mt-auto">
+        <div className="mt-2 border-t border-slate-200/60 pt-2 dark:border-white/10">
+          <button
+            onClick={() => {
+              setMobileOpen(false);
+              router.push("/tools");
+            }}
+            aria-current={pathname.startsWith("/tools") ? "page" : undefined}
+            className={[
+              "relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
+              pathname.startsWith("/tools")
+                ? "bg-brand-soft text-brand border border-brand-soft"
+                : "text-slate-600 hover:bg-black/[0.04] dark:text-slate-300 dark:hover:bg-white/5",
+            ].join(" ")}
+          >
+            <span
+              className={[
+                "flex h-[18px] w-[18px] items-center justify-center rounded-md",
+                pathname.startsWith("/tools")
+                  ? "bg-brand text-white shadow-sm"
+                  : "bg-slate-900/5 text-slate-500 dark:bg-white/5 dark:text-slate-400",
+              ].join(" ")}
+            >
+              <Wrench size={12} />
+            </span>
+            实用工具
+          </button>
+        </div>
+
+        <div className="mt-2">
           <VisitorCounter />
         </div>
       </aside>
