@@ -12,8 +12,8 @@ export default async function TrendingRail() {
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {tools.map((c, i) => (
-          <ToolCard key={c.id} card={c} rank={i + 1} />
+        {tools.map((c) => (
+          <ToolCard key={c.id} card={c} />
         ))}
       </div>
     </section>
