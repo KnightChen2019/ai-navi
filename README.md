@@ -51,6 +51,8 @@ npm run dev
       "img": "doubao.jpg",            // 对应 public/img/doubao.jpg
       "link": "https://doubao.com",
       "addedAt": "2025-12-03",        // 收录日期（YYYY-MM-DD），首页「最新收录」按此排序
+      "pricing": "freemium",          // free 免费 | freemium 部分免费 | paid 付费
+      "origin": "cn",                 // cn 国产 | global 海外
       "sections": ["AI热门工具", "AI对话聊天"]   // 一个工具可属于多个分类
     }
   ]

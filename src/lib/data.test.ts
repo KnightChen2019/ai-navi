@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getLatestCards, getAllCards } from "./data";
+import { getLatestCards, getAllCards, filterCards } from "./data";
 
 describe("getLatestCards", () => {
   it("returns newest first, limited, without duplicates", () => {
@@ -20,5 +20,30 @@ describe("getLatestCards", () => {
     for (const c of getLatestCards(20)) {
       expect(c.addedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }
+  });
+});
+
+describe("filterCards", () => {
+  const all = getAllCards();
+
+  it("returns only matching cards on each dimension", () => {
+    for (const c of filterCards(all, { pricing: "free" })) {
+      expect(c.pricing).toBe("free");
+    }
+    for (const c of filterCards(all, { origin: "cn" })) {
+      expect(c.origin).toBe("cn");
+    }
+  });
+
+  it("combines dimensions", () => {
+    for (const c of filterCards(all, { pricing: "paid", origin: "global" })) {
+      expect(c.pricing).toBe("paid");
+      expect(c.origin).toBe("global");
+    }
+  });
+
+  it('"all" disables filtering', () => {
+    expect(filterCards(all, { pricing: "all", origin: "all" })).toHaveLength(all.length);
+    expect(filterCards(all, {})).toHaveLength(all.length);
   });
 });

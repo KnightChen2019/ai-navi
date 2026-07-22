@@ -1,6 +1,9 @@
 import rawData from "../../data.json";
 
 /** A unique tool. The same tool can belong to several sections. */
+export type Pricing = "free" | "freemium" | "paid";
+export type Origin = "cn" | "global";
+
 export interface Tool {
   id: string;
   name: string;
@@ -8,6 +11,8 @@ export interface Tool {
   link: string;
   description: string;
   addedAt: string; // YYYY-MM-DD
+  pricing: Pricing;
+  origin: Origin;
   sections: string[];
 }
 
@@ -21,7 +26,7 @@ export interface Card {
 
 export interface Section {
   title: string;
-  cards: Card[];
+  cards: CardWithSection[];
 }
 
 /** A card flattened with a single representative section (its first). */
@@ -29,6 +34,8 @@ export interface CardWithSection extends Card {
   section: string;
   sections: string[];
   addedAt: string;
+  pricing: Pricing;
+  origin: Origin;
 }
 
 interface RawData {
@@ -51,7 +58,7 @@ export function getSectionTitles(): string[] {
 export function getSections(): Section[] {
   return data.sections.map((title) => ({
     title,
-    cards: data.tools.filter((t) => t.sections.includes(title)),
+    cards: data.tools.filter((t) => t.sections.includes(title)).map(toCardWithSection),
   }));
 }
 
@@ -81,4 +88,21 @@ export function getLatestCards(limit = 8): CardWithSection[] {
     .sort((a, b) => b.addedAt.localeCompare(a.addedAt) || a.id.localeCompare(b.id))
     .slice(0, limit)
     .map(toCardWithSection);
+}
+
+export interface ToolFilters {
+  pricing?: Pricing | "all";
+  origin?: Origin | "all";
+}
+
+/** Filter cards by pricing/origin; "all" (or undefined) disables that dimension. */
+export function filterCards<T extends { pricing: Pricing; origin: Origin }>(
+  cards: T[],
+  filters: ToolFilters
+): T[] {
+  return cards.filter(
+    (c) =>
+      (!filters.pricing || filters.pricing === "all" || c.pricing === filters.pricing) &&
+      (!filters.origin || filters.origin === "all" || c.origin === filters.origin)
+  );
 }

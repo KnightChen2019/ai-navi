@@ -25,7 +25,19 @@ if (!Array.isArray(tools)) errors.push("`tools` must be an array");
 
 const sectionSet = new Set(sections ?? []);
 const seenIds = new Set();
-const requiredFields = ["id", "name", "description", "img", "link", "addedAt", "sections"];
+const requiredFields = [
+  "id",
+  "name",
+  "description",
+  "img",
+  "link",
+  "addedAt",
+  "pricing",
+  "origin",
+  "sections",
+];
+const PRICING = new Set(["free", "freemium", "paid"]);
+const ORIGIN = new Set(["cn", "global"]);
 
 for (const t of tools ?? []) {
   const label = t?.id ?? JSON.stringify(t)?.slice(0, 40);
@@ -40,6 +52,10 @@ for (const t of tools ?? []) {
   }
   if (t?.addedAt != null && !/^\d{4}-\d{2}-\d{2}$/.test(t.addedAt))
     errors.push(`tool "${label}" addedAt must be YYYY-MM-DD: "${t.addedAt}"`);
+  if (t?.pricing != null && !PRICING.has(t.pricing))
+    errors.push(`tool "${label}" pricing must be free|freemium|paid: "${t.pricing}"`);
+  if (t?.origin != null && !ORIGIN.has(t.origin))
+    errors.push(`tool "${label}" origin must be cn|global: "${t.origin}"`);
   for (const s of t?.sections ?? []) {
     if (!sectionSet.has(s))
       errors.push(`tool "${label}" references unknown section: "${s}"`);

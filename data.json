@@ -21,6 +21,8 @@
       "img": "doubao.jpg",
       "link": "https://doubao.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI热门工具", "AI对话聊天", "AI文本工具"]
     },
     {
@@ -30,6 +32,8 @@
       "img": "deepseek.jpg",
       "link": "https://deepseek.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI热门工具", "AI对话聊天", "AI文本工具", "大模型API"]
     },
     {
@@ -39,6 +43,8 @@
       "img": "tongyiqianwen.jpg",
       "link": "https://qianwen.aliyun.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天", "大模型API"]
     },
     {
@@ -48,6 +54,8 @@
       "img": "wenxinyiyan.jpg",
       "link": "https://yiyan.baidu.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天"]
     },
     {
@@ -57,6 +65,8 @@
       "img": "chatgpt.jpg",
       "link": "https://chatgpt.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -66,6 +76,8 @@
       "img": "claude.png",
       "link": "https://claude.ai",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -75,6 +87,8 @@
       "img": "cursor.jpg",
       "link": "https://cursor.sh",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -84,6 +98,8 @@
       "img": "windsurf.jpg",
       "link": "https://windsurf.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -93,6 +109,8 @@
       "img": "bolt.jpg",
       "link": "https://bolt.new",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -102,6 +120,8 @@
       "img": "jimeng.jpg",
       "link": "https://jimeng.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI绘画"]
     },
     {
@@ -111,6 +131,8 @@
       "img": "midjourney.jpg",
       "link": "https://midjourney.com",
       "addedAt": "2025-12-03",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["AI绘画"]
     },
     {
@@ -120,6 +142,8 @@
       "img": "liangziwei.jpg",
       "link": "https://www.qbitai.com",
       "addedAt": "2025-12-03",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -129,6 +153,8 @@
       "img": "jiqizhixin.jpg",
       "link": "https://www.jiqizhixin.com",
       "addedAt": "2025-12-03",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -138,6 +164,8 @@
       "img": "51cto.jpg",
       "link": "https://www.51cto.com",
       "addedAt": "2025-12-03",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -147,6 +175,8 @@
       "img": "openai.jpg",
       "link": "https://openai.com",
       "addedAt": "2025-12-03",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -156,6 +186,8 @@
       "img": "gemini.jpg",
       "link": "https://gemini.google.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -165,6 +197,8 @@
       "img": "llama.jpg",
       "link": "https://llama.com",
       "addedAt": "2025-12-03",
+      "pricing": "free",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -174,6 +208,8 @@
       "img": "coze.jpg",
       "link": "https://coze.com",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["Agent工具"]
     },
     {
@@ -183,6 +219,8 @@
       "img": "chatgpt.jpg",
       "link": "https://chatgpt.com/gpts",
       "addedAt": "2025-12-03",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -192,6 +230,8 @@
       "img": "langchain.jpg",
       "link": "https://langchain.com",
       "addedAt": "2025-12-03",
+      "pricing": "free",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -201,6 +241,8 @@
       "img": "kimi.png",
       "link": "https://kimi.moonshot.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI热门工具", "AI对话聊天", "AI文本工具"]
     },
     {
@@ -210,6 +252,8 @@
       "img": "yuanbao.png",
       "link": "https://yuanbao.tencent.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI对话聊天"]
     },
     {
@@ -219,6 +263,8 @@
       "img": "xinghuo.png",
       "link": "https://xinghuo.xfyun.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天"]
     },
     {
@@ -228,6 +274,8 @@
       "img": "chatglm.png",
       "link": "https://chatglm.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天"]
     },
     {
@@ -237,6 +285,8 @@
       "img": "baichuan.png",
       "link": "https://www.baichuan-ai.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天"]
     },
     {
@@ -246,6 +296,8 @@
       "img": "tiangong.png",
       "link": "https://www.tiangong.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI对话聊天", "AI搜索"]
     },
     {
@@ -255,6 +307,8 @@
       "img": "grok.png",
       "link": "https://grok.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -264,6 +318,8 @@
       "img": "poe.png",
       "link": "https://poe.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -273,6 +329,8 @@
       "img": "characterai.png",
       "link": "https://character.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -282,6 +340,8 @@
       "img": "mistralchat.png",
       "link": "https://chat.mistral.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -291,6 +351,8 @@
       "img": "copilot.jpg",
       "link": "https://copilot.microsoft.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI对话聊天"]
     },
     {
@@ -300,6 +362,8 @@
       "img": "xiezuocat.png",
       "link": "https://xiezuocat.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI文本工具"]
     },
     {
@@ -309,6 +373,8 @@
       "img": "ibiling.png",
       "link": "https://ibiling.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI文本工具"]
     },
     {
@@ -318,6 +384,8 @@
       "img": "shenyandayi.png",
       "link": "https://www.shenyandayi.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI文本工具"]
     },
     {
@@ -327,6 +395,8 @@
       "img": "pitaya.png",
       "link": "https://www.mypitaya.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI文本工具"]
     },
     {
@@ -336,6 +406,8 @@
       "img": "grammarly.png",
       "link": "https://www.grammarly.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI文本工具"]
     },
     {
@@ -345,6 +417,8 @@
       "img": "quillbot.png",
       "link": "https://quillbot.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI文本工具"]
     },
     {
@@ -354,6 +428,8 @@
       "img": "githubcopilot.png",
       "link": "https://github.com/features/copilot",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -363,6 +439,8 @@
       "img": "trae.png",
       "link": "https://www.trae.ai",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI编程工具"]
     },
     {
@@ -372,6 +450,8 @@
       "img": "v0.png",
       "link": "https://v0.dev",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -381,6 +461,8 @@
       "img": "lovable.png",
       "link": "https://lovable.dev",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -390,6 +472,8 @@
       "img": "codeium.png",
       "link": "https://codeium.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -399,6 +483,8 @@
       "img": "tongyilingma.png",
       "link": "https://lingma.aliyun.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI编程工具"]
     },
     {
@@ -408,6 +494,8 @@
       "img": "codegeex.png",
       "link": "https://codegeex.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI编程工具"]
     },
     {
@@ -417,6 +505,8 @@
       "img": "comate.png",
       "link": "https://comate.baidu.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI编程工具"]
     },
     {
@@ -426,6 +516,8 @@
       "img": "replit.png",
       "link": "https://replit.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -435,6 +527,8 @@
       "img": "tabnine.png",
       "link": "https://www.tabnine.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI编程工具"]
     },
     {
@@ -444,6 +538,8 @@
       "img": "stablediffusion.png",
       "link": "https://stability.ai",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "global",
       "sections": ["AI绘画"]
     },
     {
@@ -453,6 +549,8 @@
       "img": "yige.png",
       "link": "https://yige.baidu.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI绘画"]
     },
     {
@@ -462,6 +560,8 @@
       "img": "liblib.png",
       "link": "https://www.liblib.art",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI绘画"]
     },
     {
@@ -471,6 +571,8 @@
       "img": "tusiart.png",
       "link": "https://tusiart.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI绘画"]
     },
     {
@@ -480,6 +582,8 @@
       "img": "leonardo.png",
       "link": "https://leonardo.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI绘画"]
     },
     {
@@ -489,6 +593,8 @@
       "img": "ideogram.png",
       "link": "https://ideogram.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI绘画"]
     },
     {
@@ -498,6 +604,8 @@
       "img": "recraft.png",
       "link": "https://www.recraft.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI绘画"]
     },
     {
@@ -507,6 +615,8 @@
       "img": "gaoding.png",
       "link": "https://www.gaoding.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI绘画"]
     },
     {
@@ -516,6 +626,8 @@
       "img": "kling.png",
       "link": "https://klingai.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI热门工具", "AI视频"]
     },
     {
@@ -525,6 +637,8 @@
       "img": "hailuo.png",
       "link": "https://hailuoai.video",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI视频"]
     },
     {
@@ -534,6 +648,8 @@
       "img": "vidu.png",
       "link": "https://www.vidu.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI视频"]
     },
     {
@@ -543,6 +659,8 @@
       "img": "runway.png",
       "link": "https://runwayml.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI视频"]
     },
     {
@@ -552,6 +670,8 @@
       "img": "pika.png",
       "link": "https://pika.art",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI视频"]
     },
     {
@@ -561,6 +681,8 @@
       "img": "luma.png",
       "link": "https://lumalabs.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI视频"]
     },
     {
@@ -570,6 +692,8 @@
       "img": "sora.png",
       "link": "https://sora.com",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["AI热门工具", "AI视频"]
     },
     {
@@ -579,6 +703,8 @@
       "img": "jianying.png",
       "link": "https://www.jianying.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI视频"]
     },
     {
@@ -588,6 +714,8 @@
       "img": "heygen.png",
       "link": "https://www.heygen.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI视频"]
     },
     {
@@ -597,6 +725,8 @@
       "img": "synthesia.png",
       "link": "https://www.synthesia.io",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["AI视频"]
     },
     {
@@ -606,6 +736,8 @@
       "img": "pixverse.png",
       "link": "https://pixverse.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI视频"]
     },
     {
@@ -615,6 +747,8 @@
       "img": "tongyiwanxiang.png",
       "link": "https://tongyi.aliyun.com/wanxiang",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI视频", "AI绘画"]
     },
     {
@@ -624,6 +758,8 @@
       "img": "suno.png",
       "link": "https://suno.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI热门工具", "AI音频"]
     },
     {
@@ -633,6 +769,8 @@
       "img": "udio.png",
       "link": "https://www.udio.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -642,6 +780,8 @@
       "img": "elevenlabs.png",
       "link": "https://elevenlabs.io",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -651,6 +791,8 @@
       "img": "fishaudio.png",
       "link": "https://fish.audio",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -660,6 +802,8 @@
       "img": "tianyin.png",
       "link": "https://tianyin.music.163.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI音频"]
     },
     {
@@ -669,6 +813,8 @@
       "img": "moyin.png",
       "link": "https://www.moyin.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI音频"]
     },
     {
@@ -678,6 +824,8 @@
       "img": "xunfeipeiyin.png",
       "link": "https://peiyin.xunfei.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI音频"]
     },
     {
@@ -687,6 +835,8 @@
       "img": "stableaudio.png",
       "link": "https://www.stableaudio.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -696,6 +846,8 @@
       "img": "aiva.png",
       "link": "https://www.aiva.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -705,6 +857,8 @@
       "img": "mubert.png",
       "link": "https://mubert.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI音频"]
     },
     {
@@ -714,6 +868,8 @@
       "img": "wpsai.png",
       "link": "https://ai.wps.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -723,6 +879,8 @@
       "img": "gamma.jpg",
       "link": "https://gamma.app",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI热门工具", "AI办公"]
     },
     {
@@ -732,6 +890,8 @@
       "img": "aippt.png",
       "link": "https://www.aippt.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -741,6 +901,8 @@
       "img": "zhiwen.png",
       "link": "https://zhiwen.xfyun.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -750,6 +912,8 @@
       "img": "notion.png",
       "link": "https://www.notion.so",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI办公"]
     },
     {
@@ -759,6 +923,8 @@
       "img": "tingwu.png",
       "link": "https://tingwu.aliyun.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -768,6 +934,8 @@
       "img": "iflyrec.png",
       "link": "https://www.iflyrec.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -777,6 +945,8 @@
       "img": "otter.png",
       "link": "https://otter.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI办公"]
     },
     {
@@ -786,6 +956,8 @@
       "img": "feishu.png",
       "link": "https://www.feishu.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -795,6 +967,8 @@
       "img": "boardmix.png",
       "link": "https://boardmix.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -804,6 +978,8 @@
       "img": "processon.png",
       "link": "https://www.processon.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -813,6 +989,8 @@
       "img": "islide.png",
       "link": "https://www.islide.cc",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI办公"]
     },
     {
@@ -822,6 +1000,8 @@
       "img": "perplexity.png",
       "link": "https://www.perplexity.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI热门工具", "AI搜索"]
     },
     {
@@ -831,6 +1011,8 @@
       "img": "metaso.png",
       "link": "https://metaso.cn",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI搜索"]
     },
     {
@@ -840,6 +1022,8 @@
       "img": "quark.png",
       "link": "https://www.quark.cn",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI搜索"]
     },
     {
@@ -849,6 +1033,8 @@
       "img": "phind.png",
       "link": "https://www.phind.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI搜索"]
     },
     {
@@ -858,6 +1044,8 @@
       "img": "thinkany.png",
       "link": "https://thinkany.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI搜索"]
     },
     {
@@ -867,6 +1055,8 @@
       "img": "you.png",
       "link": "https://you.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI搜索"]
     },
     {
@@ -876,6 +1066,8 @@
       "img": "consensus.png",
       "link": "https://consensus.app",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["AI搜索"]
     },
     {
@@ -885,6 +1077,8 @@
       "img": "infoq.png",
       "link": "https://www.infoq.cn",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -894,6 +1088,8 @@
       "img": "leiphone.png",
       "link": "https://www.leiphone.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -903,6 +1099,8 @@
       "img": "aibase.png",
       "link": "https://www.aibase.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["AI新闻"]
     },
     {
@@ -912,6 +1110,8 @@
       "img": "anthropic.png",
       "link": "https://www.anthropic.com",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -921,6 +1121,8 @@
       "img": "mistral.png",
       "link": "https://mistral.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -930,6 +1132,8 @@
       "img": "openrouter.png",
       "link": "https://openrouter.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -939,6 +1143,8 @@
       "img": "together.png",
       "link": "https://www.together.ai",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -948,6 +1154,8 @@
       "img": "groq.png",
       "link": "https://groq.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -957,6 +1165,8 @@
       "img": "siliconflow.png",
       "link": "https://siliconflow.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["大模型API"]
     },
     {
@@ -966,6 +1176,8 @@
       "img": "bigmodel.png",
       "link": "https://www.bigmodel.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["大模型API"]
     },
     {
@@ -975,6 +1187,8 @@
       "img": "moonshot.png",
       "link": "https://platform.moonshot.cn",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["大模型API"]
     },
     {
@@ -984,6 +1198,8 @@
       "img": "volcengine.png",
       "link": "https://www.volcengine.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["大模型API"]
     },
     {
@@ -993,6 +1209,8 @@
       "img": "bailian.png",
       "link": "https://www.aliyun.com/product/bailian",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["大模型API"]
     },
     {
@@ -1002,6 +1220,8 @@
       "img": "replicate.png",
       "link": "https://replicate.com",
       "addedAt": "2026-07-22",
+      "pricing": "paid",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -1011,6 +1231,8 @@
       "img": "huggingface.png",
       "link": "https://huggingface.co",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["大模型API"]
     },
     {
@@ -1020,6 +1242,8 @@
       "img": "dify.png",
       "link": "https://dify.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["Agent工具"]
     },
     {
@@ -1029,6 +1253,8 @@
       "img": "fastgpt.png",
       "link": "https://fastgpt.in",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["Agent工具"]
     },
     {
@@ -1038,6 +1264,8 @@
       "img": "yuanqi.png",
       "link": "https://yuanqi.tencent.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
       "sections": ["Agent工具"]
     },
     {
@@ -1047,6 +1275,8 @@
       "img": "zapier.png",
       "link": "https://zapier.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -1056,6 +1286,8 @@
       "img": "make.png",
       "link": "https://www.make.com",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -1065,6 +1297,8 @@
       "img": "n8n.png",
       "link": "https://n8n.io",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -1074,6 +1308,8 @@
       "img": "manus.png",
       "link": "https://manus.im",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
       "sections": ["AI热门工具", "Agent工具"]
     },
     {
@@ -1083,6 +1319,8 @@
       "img": "genspark.png",
       "link": "https://www.genspark.ai",
       "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
       "sections": ["Agent工具", "AI搜索"]
     },
     {
@@ -1092,6 +1330,8 @@
       "img": "flowise.png",
       "link": "https://flowiseai.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "global",
       "sections": ["Agent工具"]
     },
     {
@@ -1101,6 +1341,8 @@
       "img": "crewai.png",
       "link": "https://www.crewai.com",
       "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "global",
       "sections": ["Agent工具"]
     }
   ]

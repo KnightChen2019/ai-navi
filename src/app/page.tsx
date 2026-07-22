@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { getSections, getAllCards } from "@/lib/data";
-import ToolCard from "@/components/ToolCard";
 import TrendingRail from "@/components/TrendingRail";
 import LatestRail from "@/components/LatestRail";
+import FilterableSections from "@/components/FilterableSections";
 
 export const dynamic = "force-dynamic"; // 本周热门按请求读文件
 
@@ -32,27 +32,8 @@ export default function Home() {
       {/* 最新收录 */}
       <LatestRail />
 
-      {/* Sections */}
-      <div className="space-y-10">
-        {sections.map((section) => (
-          <section key={section.title} id={section.title} className="scroll-mt-[100px]">
-            <div className="mb-3 flex items-baseline gap-2.5 px-1">
-              <h2 className="text-[15px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-                {section.title}
-              </h2>
-              <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[10px] font-semibold text-brand">
-                {section.cards.length} 个
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {section.cards.map((c) => (
-                <ToolCard key={c.id} card={c} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      {/* 筛选 + 分类列表 */}
+      <FilterableSections sections={sections} />
 
       <footer className="mt-12 border-t border-slate-200/60 dark:border-white/10 pt-6 pb-4 text-xs text-slate-400 dark:text-slate-500">
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 px-1">
