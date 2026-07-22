@@ -7,7 +7,14 @@ import OutboundVisitButton from "@/components/OutboundVisitButton";
 import FavoriteButton from "@/components/FavoriteButton";
 import ToolCard from "@/components/ToolCard";
 import { siteConfig } from "@/lib/site";
-import { getAllCards, getCardById, getRelatedCards } from "@/lib/data";
+import {
+  getAllCards,
+  getCardById,
+  getRelatedCards,
+  PRICING_LABELS,
+  ORIGIN_LABELS,
+} from "@/lib/data";
+import { mdToHtml } from "@/lib/tools/markdown";
 
 interface PageProps {
   params: Promise<{ card_id: string }>;
@@ -99,7 +106,37 @@ export default async function CardDetail({ params }: PageProps) {
         <p className="mt-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
           {card.description}
         </p>
+
+        {/* Meta info */}
+        <dl className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+          {[
+            { label: "费用", value: PRICING_LABELS[card.pricing] },
+            { label: "地区", value: ORIGIN_LABELS[card.origin] },
+            { label: "收录时间", value: card.addedAt },
+            { label: "分类", value: card.sections.join(" / ") },
+          ].map((item) => (
+            <div key={item.label} className="glass-subtle rounded-xl px-3 py-2.5">
+              <dt className="text-[10px] text-slate-400 dark:text-slate-500">{item.label}</dt>
+              <dd className="mt-0.5 text-xs font-semibold text-slate-700 dark:text-slate-200 truncate">
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
+
+      {/* Detail (optional long-form markdown) */}
+      {card.detail && (
+        <section className="glass-medium mt-6 rounded-3xl p-5 sm:p-8">
+          <h2 className="mb-4 text-[14px] font-bold text-slate-900 dark:text-slate-100">
+            详细介绍
+          </h2>
+          <div
+            className="md-preview text-sm text-slate-700 dark:text-slate-300"
+            dangerouslySetInnerHTML={{ __html: mdToHtml(card.detail) }}
+          />
+        </section>
+      )}
 
       {/* Related */}
       {related.length > 0 && (

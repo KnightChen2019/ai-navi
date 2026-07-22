@@ -56,6 +56,8 @@ for (const t of tools ?? []) {
     errors.push(`tool "${label}" pricing must be free|freemium|paid: "${t.pricing}"`);
   if (t?.origin != null && !ORIGIN.has(t.origin))
     errors.push(`tool "${label}" origin must be cn|global: "${t.origin}"`);
+  if (t?.detail != null && typeof t.detail !== "string")
+    errors.push(`tool "${label}" detail must be a string`);
   for (const s of t?.sections ?? []) {
     if (!sectionSet.has(s))
       errors.push(`tool "${label}" references unknown section: "${s}"`);

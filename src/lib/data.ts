@@ -13,8 +13,20 @@ export interface Tool {
   addedAt: string; // YYYY-MM-DD
   pricing: Pricing;
   origin: Origin;
+  detail?: string; // 详情页「详细介绍」，Markdown 子集
   sections: string[];
 }
+
+export const PRICING_LABELS: Record<Pricing, string> = {
+  free: "免费",
+  freemium: "部分免费",
+  paid: "付费",
+};
+
+export const ORIGIN_LABELS: Record<Origin, string> = {
+  cn: "国产",
+  global: "海外",
+};
 
 export interface Card {
   id: string;
@@ -36,6 +48,7 @@ export interface CardWithSection extends Card {
   addedAt: string;
   pricing: Pricing;
   origin: Origin;
+  detail?: string;
 }
 
 interface RawData {
