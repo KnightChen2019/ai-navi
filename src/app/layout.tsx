@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: ["AI 工具", "AI 导航", "人工智能", "AI 对话", "AI 绘画", "AI 编程", "大模型", "AI Agent"],
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
   openGraph: {
     type: "website",
     locale: "zh_CN",
