@@ -83,7 +83,7 @@
       "name": "Bolt",
       "description": "Bolt 是一款AI编程工具，支持多种编程语言",
       "img": "bolt.jpg",
-      "link": "https://bolt.sh",
+      "link": "https://bolt.new",
       "sections": ["AI编程工具"]
     },
     {
@@ -284,14 +284,6 @@
       "description": "清华团队推出的智能词句检索工具",
       "img": "shenyandayi.png",
       "link": "https://www.shenyandayi.com",
-      "sections": ["AI文本工具"]
-    },
-    {
-      "id": "effidit",
-      "name": "Effidit",
-      "description": "腾讯AI Lab推出的智能创作助手",
-      "img": "effidit.png",
-      "link": "https://effidit.qq.com",
       "sections": ["AI文本工具"]
     },
     {
