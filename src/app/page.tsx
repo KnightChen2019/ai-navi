@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getSections, getAllCards } from "@/lib/data";
 import ToolCard from "@/components/ToolCard";
 import TrendingRail from "@/components/TrendingRail";
+import LatestRail from "@/components/LatestRail";
 
 export const dynamic = "force-dynamic"; // 本周热门按请求读文件
 
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* 本周热门 */}
       <TrendingRail />
+
+      {/* 最新收录 */}
+      <LatestRail />
 
       {/* Sections */}
       <div className="space-y-10">

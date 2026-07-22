@@ -25,7 +25,7 @@ if (!Array.isArray(tools)) errors.push("`tools` must be an array");
 
 const sectionSet = new Set(sections ?? []);
 const seenIds = new Set();
-const requiredFields = ["id", "name", "description", "img", "link", "sections"];
+const requiredFields = ["id", "name", "description", "img", "link", "addedAt", "sections"];
 
 for (const t of tools ?? []) {
   const label = t?.id ?? JSON.stringify(t)?.slice(0, 40);
@@ -38,6 +38,8 @@ for (const t of tools ?? []) {
     if (!/^[a-z0-9][a-z0-9-]*$/.test(t.id))
       errors.push(`tool id is not a url-safe slug: "${t.id}"`);
   }
+  if (t?.addedAt != null && !/^\d{4}-\d{2}-\d{2}$/.test(t.addedAt))
+    errors.push(`tool "${label}" addedAt must be YYYY-MM-DD: "${t.addedAt}"`);
   for (const s of t?.sections ?? []) {
     if (!sectionSet.has(s))
       errors.push(`tool "${label}" references unknown section: "${s}"`);

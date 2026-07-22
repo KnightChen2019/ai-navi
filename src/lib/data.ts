@@ -7,6 +7,7 @@ export interface Tool {
   img: string;
   link: string;
   description: string;
+  addedAt: string; // YYYY-MM-DD
   sections: string[];
 }
 
@@ -27,6 +28,7 @@ export interface Section {
 export interface CardWithSection extends Card {
   section: string;
   sections: string[];
+  addedAt: string;
 }
 
 interface RawData {
@@ -69,6 +71,14 @@ export function getRelatedCards(id: string, limit = 4): CardWithSection[] {
   if (!tool) return [];
   return data.tools
     .filter((t) => t.id !== id && t.sections.some((s) => tool.sections.includes(s)))
+    .slice(0, limit)
+    .map(toCardWithSection);
+}
+
+/** Most recently added tools first (ties broken by id for stability). */
+export function getLatestCards(limit = 8): CardWithSection[] {
+  return [...data.tools]
+    .sort((a, b) => b.addedAt.localeCompare(a.addedAt) || a.id.localeCompare(b.id))
     .slice(0, limit)
     .map(toCardWithSection);
 }

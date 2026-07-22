@@ -50,6 +50,7 @@ npm run dev
       "description": "抖音旗下AI助手",
       "img": "doubao.jpg",            // 对应 public/img/doubao.jpg
       "link": "https://doubao.com",
+      "addedAt": "2025-12-03",        // 收录日期（YYYY-MM-DD），首页「最新收录」按此排序
       "sections": ["AI热门工具", "AI对话聊天"]   // 一个工具可属于多个分类
     }
   ]
