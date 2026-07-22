@@ -54,7 +54,7 @@
       "id": "claude",
       "name": "Claude",
       "description": "Claude 是人工智能研究实验室 Anthropic 发布的聊天机器人模型",
-      "img": "claude.jpg",
+      "img": "claude.png",
       "link": "https://claude.ai",
       "sections": ["AI对话聊天"]
     },
