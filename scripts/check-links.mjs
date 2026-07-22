@@ -18,7 +18,8 @@ const HEADERS = {
   "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
 };
 
-/** Resolve final status with HEAD, retrying with GET when HEAD is not allowed. */
+/** Resolve final status with HEAD, retrying with GET when HEAD fails (some
+ *  WAFs answer HEAD with 404/4xx while GET works fine). */
 async function probe(url) {
   for (const method of ["HEAD", "GET"]) {
     try {
@@ -29,7 +30,7 @@ async function probe(url) {
         redirect: "follow",
       });
       await res.body?.cancel().catch(() => {});
-      if (method === "HEAD" && (res.status === 405 || res.status === 501)) continue;
+      if (method === "HEAD" && res.status >= 400) continue; // verify with GET
       return { status: res.status, finalUrl: res.url };
     } catch (e) {
       if (method === "GET") return { error: e.cause?.code ?? e.message };

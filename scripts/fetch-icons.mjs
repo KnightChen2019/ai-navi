@@ -75,19 +75,20 @@ function encodePng(width, height, rgba) {
 }
 
 /**
- * Decode one ICO BMP frame (BITMAPINFOHEADER + XOR pixels + AND mask,
- * bottom-up) to a PNG buffer. Supports 24/32bpp BI_RGB; returns null
- * otherwise.
+ * Decode one ICO BMP frame (BITMAPINFOHEADER + palette + XOR pixels + AND
+ * mask, bottom-up) to a PNG buffer. Supports 4/8bpp (palette) and 24/32bpp
+ * BI_RGB frames; returns null otherwise.
  */
 function decodeIcoBmpFrame(frame) {
   if (frame.length < 40 || frame.readUInt32LE(0) !== 40) return null;
   const width = frame.readInt32LE(4);
   const height = frame.readInt32LE(8) / 2; // XOR + AND
   const bpp = frame.readUInt16LE(14);
-  if (width <= 0 || height <= 0 || (bpp !== 24 && bpp !== 32)) return null;
-  const xorStride = bpp === 32 ? width * 4 : Math.ceil((width * 3) / 4) * 4;
+  if (width <= 0 || height <= 0 || ![4, 8, 24, 32].includes(bpp)) return null;
+  const paletteColors = bpp <= 8 ? frame.readUInt32LE(32) || 1 << bpp : 0;
+  const xorStart = 40 + paletteColors * 4;
+  const xorStride = Math.ceil((width * bpp) / 32) * 4;
   const andStride = Math.ceil(width / 32) * 4;
-  const xorStart = 40;
   const andStart = xorStart + xorStride * height;
   if (andStart + andStride * height > frame.length) return null;
 
@@ -102,14 +103,28 @@ function decodeIcoBmpFrame(frame) {
         rgba[d + 1] = frame[srcRow + x * 4 + 1];
         rgba[d + 2] = frame[srcRow + x * 4];
         rgba[d + 3] = frame[srcRow + x * 4 + 3];
-      } else {
+      } else if (bpp === 24) {
         rgba[d] = frame[srcRow + x * 3 + 2];
         rgba[d + 1] = frame[srcRow + x * 3 + 1];
         rgba[d + 2] = frame[srcRow + x * 3];
         rgba[d + 3] = 255;
+      } else {
+        // palette: 8bpp = 1 byte/px, 4bpp = 2 px/byte (high nibble first)
+        const bytePos = srcRow + (bpp === 8 ? x : x >> 1);
+        const idx =
+          bpp === 8
+            ? frame[bytePos]
+            : x % 2 === 0
+              ? frame[bytePos] >> 4
+              : frame[bytePos] & 0x0f;
+        const p = 40 + idx * 4;
+        rgba[d] = frame[p + 2];
+        rgba[d + 1] = frame[p + 1];
+        rgba[d + 2] = frame[p];
+        rgba[d + 3] = 255;
       }
-      // 32bpp frames with an all-zero alpha channel rely on the AND mask.
-      if (bpp === 24 || rgba[d + 3] === 0) {
+      // Frames without an alpha channel rely on the AND mask.
+      if (bpp !== 32 || rgba[d + 3] === 0) {
         const masked = (frame[andRow + (x >> 3)] >> (7 - (x & 7))) & 1;
         rgba[d + 3] = masked ? 0 : 255;
       }
