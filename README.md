@@ -27,6 +27,7 @@ npm run dev
 | `npm run start` | 运行生产构建（:4000） |
 | `npm run lint` | ESLint 检查 |
 | `npm run validate` | 校验 `data.json`（id 唯一、分类合法、图片存在等） |
+| `npm run fetch-icons` | 为缺失 logo 的工具自动抓取站点图标（`-- --all` 全量重抓） |
 
 ## 环境变量
 
@@ -54,7 +55,7 @@ npm run dev
 }
 ```
 
-- 新增工具：在 `tools` 里加一项，并把 logo 放到 `public/img/`。
+- 新增工具：在 `tools` 里加一项（`img` 先写 `<id>.png`），再运行 `npm run fetch-icons` 自动抓图标到 `public/img/`；抓不到时手动放图。
 - 调整分类顺序：改 `sections` 数组顺序即可（侧边栏图标映射在 `src/components/Sidebar.tsx`）。
 - 提交前可运行 `npm run validate` 自检；`npm run build` 也会自动校验。
 
