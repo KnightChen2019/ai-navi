@@ -28,6 +28,7 @@ npm run dev
 | `npm run lint` | ESLint 检查 |
 | `npm run validate` | 校验 `data.json`（id 唯一、分类合法、图片存在等） |
 | `npm run fetch-icons` | 为缺失 logo 的工具自动抓取站点图标（`-- --all` 全量重抓） |
+| `npm run check-links` | 巡检 `data.json` 全部出站链接，报死链（403 视为存活仅告警） |
 
 ## 环境变量
 

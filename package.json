@@ -10,7 +10,8 @@
     "test:watch": "vitest",
     "lint": "eslint",
     "validate": "node scripts/validate-data.mjs",
-    "fetch-icons": "node scripts/fetch-icons.mjs"
+    "fetch-icons": "node scripts/fetch-icons.mjs",
+    "check-links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
