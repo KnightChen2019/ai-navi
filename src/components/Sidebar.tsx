@@ -13,7 +13,7 @@ import {
   Briefcase,
   Search,
   TrendingUp,
-  Megaphone,
+  Newspaper,
   Share2,
   Bot,
   Wrench,
@@ -35,10 +35,10 @@ const items: NavItem[] = [
   { id: "AI音频", label: "AI 音频", Icon: Music },
   { id: "AI办公", label: "AI 办公", Icon: Briefcase },
   { id: "AI搜索", label: "AI 搜索", Icon: Search },
-  { id: "AI金融", label: "AI 金融", Icon: TrendingUp },
-  { id: "AI新闻", label: "AI 新闻", Icon: Megaphone },
   { id: "大模型API", label: "大模型 API", Icon: Share2 },
   { id: "Agent工具", label: "Agent 工具", Icon: Bot },
+  { id: "金融", label: "金融", Icon: TrendingUp },
+  { id: "新闻", label: "新闻", Icon: Newspaper },
   { id: "tools", label: "实用工具", Icon: Wrench, href: "/tools" },
 ];
 

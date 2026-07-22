@@ -9,10 +9,10 @@
     "AI音频",
     "AI办公",
     "AI搜索",
-    "AI金融",
-    "AI新闻",
     "大模型API",
-    "Agent工具"
+    "Agent工具",
+    "金融",
+    "新闻"
   ],
   "tools": [
     {
@@ -147,7 +147,7 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "jiqizhixin",
@@ -158,7 +158,7 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "51cto",
@@ -169,7 +169,7 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "openai",
@@ -1088,7 +1088,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "leiphone",
@@ -1099,7 +1099,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "aibase",
@@ -1110,7 +1110,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "anthropic",
@@ -1364,7 +1364,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "eastmoneychoice",
@@ -1375,7 +1375,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "xueqiu",
@@ -1386,7 +1386,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "tradingview",
@@ -1397,7 +1397,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "investing",
@@ -1408,7 +1408,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "datayes",
@@ -1419,7 +1419,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "bigquant",
@@ -1430,7 +1430,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "joinquant",
@@ -1441,7 +1441,7 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI金融"]
+      "sections": ["金融"]
     },
     {
       "id": "36kr",
@@ -1452,7 +1452,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "huxiu",
@@ -1463,7 +1463,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "tmtpost",
@@ -1474,7 +1474,7 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
     },
     {
       "id": "ifanr",
@@ -1485,7 +1485,128 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI新闻"]
+      "sections": ["新闻"]
+    },
+    {
+      "id": "sinanews",
+      "name": "新浪新闻",
+      "description": "综合新闻门户，覆盖国内外时事资讯",
+      "img": "sinanews.png",
+      "link": "https://news.sina.com.cn",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["新闻"]
+    },
+    {
+      "id": "qqnews",
+      "name": "腾讯新闻",
+      "description": "腾讯推出的综合新闻资讯平台",
+      "img": "qqnews.png",
+      "link": "https://news.qq.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["新闻"]
+    },
+    {
+      "id": "neteasenews",
+      "name": "网易新闻",
+      "description": "网易推出的综合新闻资讯平台",
+      "img": "neteasenews.png",
+      "link": "https://news.163.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["新闻"]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "description": "专注时政与思想的互联网新闻媒体",
+      "img": "thepaper.png",
+      "link": "https://www.thepaper.cn",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["新闻"]
+    },
+    {
+      "id": "xinhuanet",
+      "name": "新华网",
+      "description": "新华社主办的官方新闻网站",
+      "img": "xinhuanet.png",
+      "link": "https://www.xinhuanet.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["新闻"]
+    },
+    {
+      "id": "eastmoney",
+      "name": "东方财富",
+      "description": "财经资讯与股票行情门户",
+      "img": "eastmoney.png",
+      "link": "https://www.eastmoney.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["金融"]
+    },
+    {
+      "id": "10jqka",
+      "name": "同花顺",
+      "description": "老牌炒股软件与财经数据平台",
+      "img": "10jqka.png",
+      "link": "https://www.10jqka.com.cn",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["金融"]
+    },
+    {
+      "id": "sinafinance",
+      "name": "新浪财经",
+      "description": "新浪财经频道，行情与财经资讯",
+      "img": "sinafinance.png",
+      "link": "https://finance.sina.com.cn",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["金融"]
+    },
+    {
+      "id": "guqq",
+      "name": "腾讯自选股",
+      "description": "腾讯推出的股票行情与资讯平台",
+      "img": "guqq.png",
+      "link": "https://gu.qq.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["金融"]
+    },
+    {
+      "id": "wallstreetcn",
+      "name": "华尔街见闻",
+      "description": "全球宏观与市场资讯平台",
+      "img": "wallstreetcn.png",
+      "link": "https://wallstreetcn.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["金融"]
+    },
+    {
+      "id": "caixin",
+      "name": "财新网",
+      "description": "原创财经新闻媒体",
+      "img": "caixin.png",
+      "link": "https://www.caixin.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["金融"]
     }
   ]
 }

@@ -22,7 +22,7 @@ export default function Home() {
           发现优质 AI 工具
         </h1>
         <p className="mt-1.5 text-[13px] text-slate-600 dark:text-slate-400">
-          精选对话、写作、绘画、编程、Agent 等领域的 AI 应用
+          精选 AI 工具与金融、新闻优质站点
         </p>
       </section>
 
