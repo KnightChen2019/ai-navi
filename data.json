@@ -5,6 +5,10 @@
     "AI文本工具",
     "AI编程工具",
     "AI绘画",
+    "AI视频",
+    "AI音频",
+    "AI办公",
+    "AI搜索",
     "AI新闻",
     "大模型API",
     "Agent工具"
@@ -168,6 +172,822 @@
       "description": "Langchain 是一款AI Agent工具，支持多种Agent，包括GPT-4、DALL-E等",
       "img": "langchain.jpg",
       "link": "https://langchain.com",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "description": "月之暗面推出的AI助手，支持超长上下文",
+      "img": "kimi.png",
+      "link": "https://kimi.moonshot.cn",
+      "sections": ["AI热门工具", "AI对话聊天", "AI文本工具"]
+    },
+    {
+      "id": "yuanbao",
+      "name": "腾讯元宝",
+      "description": "腾讯推出的AI助手，接入混元大模型",
+      "img": "yuanbao.png",
+      "link": "https://yuanbao.tencent.com",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "xinghuo",
+      "name": "讯飞星火",
+      "description": "科大讯飞推出的认知大模型",
+      "img": "xinghuo.png",
+      "link": "https://xinghuo.xfyun.cn",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "chatglm",
+      "name": "智谱清言",
+      "description": "智谱AI推出的对话助手，基于GLM大模型",
+      "img": "chatglm.png",
+      "link": "https://chatglm.cn",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "baichuan",
+      "name": "百川智能",
+      "description": "百川智能推出的大模型助手",
+      "img": "baichuan.png",
+      "link": "https://www.baichuan-ai.com",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "tiangong",
+      "name": "天工AI",
+      "description": "昆仑万维推出的AI搜索与对话助手",
+      "img": "tiangong.png",
+      "link": "https://www.tiangong.cn",
+      "sections": ["AI对话聊天", "AI搜索"]
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "description": "xAI推出的AI助手",
+      "img": "grok.png",
+      "link": "https://grok.com",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "description": "Quora推出的AI聊天机器人聚合平台",
+      "img": "poe.png",
+      "link": "https://poe.com",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "characterai",
+      "name": "Character.AI",
+      "description": "与各类AI角色对话互动的平台",
+      "img": "characterai.png",
+      "link": "https://character.ai",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "mistralchat",
+      "name": "Le Chat",
+      "description": "Mistral AI推出的对话助手",
+      "img": "mistralchat.png",
+      "link": "https://chat.mistral.ai",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "description": "微软推出的AI助手",
+      "img": "copilot.jpg",
+      "link": "https://copilot.microsoft.com",
+      "sections": ["AI对话聊天"]
+    },
+    {
+      "id": "xiezuocat",
+      "name": "秘塔写作猫",
+      "description": "AI写作助手，支持纠错、改写与续写",
+      "img": "xiezuocat.png",
+      "link": "https://xiezuocat.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "ibiling",
+      "name": "笔灵AI写作",
+      "description": "面向论文、公文等场景的AI写作工具",
+      "img": "ibiling.png",
+      "link": "https://ibiling.cn",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "shenyandayi",
+      "name": "深言达意",
+      "description": "清华团队推出的智能词句检索工具",
+      "img": "shenyandayi.png",
+      "link": "https://www.shenyandayi.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "effidit",
+      "name": "Effidit",
+      "description": "腾讯AI Lab推出的智能创作助手",
+      "img": "effidit.png",
+      "link": "https://effidit.qq.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "pitaya",
+      "name": "火龙果写作",
+      "description": "AI驱动的英语写作辅助工具",
+      "img": "pitaya.png",
+      "link": "https://www.mypitaya.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "description": "英语语法检查与写作优化工具",
+      "img": "grammarly.png",
+      "link": "https://www.grammarly.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "quillbot",
+      "name": "QuillBot",
+      "description": "英语改写、总结与语法检查工具",
+      "img": "quillbot.png",
+      "link": "https://quillbot.com",
+      "sections": ["AI文本工具"]
+    },
+    {
+      "id": "githubcopilot",
+      "name": "GitHub Copilot",
+      "description": "GitHub与OpenAI推出的AI结对编程助手",
+      "img": "githubcopilot.png",
+      "link": "https://github.com/features/copilot",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "trae",
+      "name": "Trae",
+      "description": "字节跳动推出的AI IDE",
+      "img": "trae.png",
+      "link": "https://www.trae.ai",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "v0",
+      "name": "v0",
+      "description": "Vercel推出的AI界面生成工具",
+      "img": "v0.png",
+      "link": "https://v0.dev",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "description": "用自然语言生成全栈应用",
+      "img": "lovable.png",
+      "link": "https://lovable.dev",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "codeium",
+      "name": "Codeium",
+      "description": "免费的AI代码补全与搜索工具",
+      "img": "codeium.png",
+      "link": "https://codeium.com",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "tongyilingma",
+      "name": "通义灵码",
+      "description": "阿里推出的智能编码助手",
+      "img": "tongyilingma.png",
+      "link": "https://lingma.aliyun.com",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "codegeex",
+      "name": "CodeGeeX",
+      "description": "智谱AI推出的代码生成模型与插件",
+      "img": "codegeex.png",
+      "link": "https://codegeex.cn",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "comate",
+      "name": "文心快码",
+      "description": "百度推出的智能代码助手",
+      "img": "comate.png",
+      "link": "https://comate.baidu.com",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "description": "在线IDE，内置AI编程助手",
+      "img": "replit.png",
+      "link": "https://replit.com",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "description": "AI代码补全工具",
+      "img": "tabnine.png",
+      "link": "https://www.tabnine.com",
+      "sections": ["AI编程工具"]
+    },
+    {
+      "id": "stablediffusion",
+      "name": "Stable Diffusion",
+      "description": "Stability AI推出的开源绘画模型",
+      "img": "stablediffusion.png",
+      "link": "https://stability.ai",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "yige",
+      "name": "文心一格",
+      "description": "百度推出的AI绘画平台",
+      "img": "yige.png",
+      "link": "https://yige.baidu.com",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "liblib",
+      "name": "LiblibAI",
+      "description": "国内领先的AI绘画模型社区",
+      "img": "liblib.png",
+      "link": "https://www.liblib.art",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "tusiart",
+      "name": "吐司AI",
+      "description": "在线AI绘画与模型分享平台",
+      "img": "tusiart.png",
+      "link": "https://tusiart.com",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo.Ai",
+      "description": "AI绘画与素材生成平台",
+      "img": "leonardo.png",
+      "link": "https://leonardo.ai",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "description": "擅长文字渲染的AI绘画工具",
+      "img": "ideogram.png",
+      "link": "https://ideogram.ai",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "recraft",
+      "name": "Recraft",
+      "description": "面向设计师的AI绘画工具",
+      "img": "recraft.png",
+      "link": "https://www.recraft.ai",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "gaoding",
+      "name": "稿定设计",
+      "description": "在线设计平台，内置AI绘图能力",
+      "img": "gaoding.png",
+      "link": "https://www.gaoding.com",
+      "sections": ["AI绘画"]
+    },
+    {
+      "id": "kling",
+      "name": "可灵AI",
+      "description": "快手推出的视频生成大模型",
+      "img": "kling.png",
+      "link": "https://klingai.com",
+      "sections": ["AI热门工具", "AI视频"]
+    },
+    {
+      "id": "hailuo",
+      "name": "海螺AI",
+      "description": "MiniMax推出的视频生成工具",
+      "img": "hailuo.png",
+      "link": "https://hailuoai.video",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "vidu",
+      "name": "Vidu",
+      "description": "生数科技推出的视频生成工具",
+      "img": "vidu.png",
+      "link": "https://www.vidu.com",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "description": "AI视频生成与编辑平台",
+      "img": "runway.png",
+      "link": "https://runwayml.com",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "description": "AI视频生成工具",
+      "img": "pika.png",
+      "link": "https://pika.art",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "luma",
+      "name": "Luma Dream Machine",
+      "description": "Luma AI推出的视频生成工具",
+      "img": "luma.png",
+      "link": "https://lumalabs.ai",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "description": "OpenAI推出的视频生成模型",
+      "img": "sora.png",
+      "link": "https://sora.com",
+      "sections": ["AI热门工具", "AI视频"]
+    },
+    {
+      "id": "jianying",
+      "name": "剪映",
+      "description": "字节跳动推出的视频剪辑工具，内置AI能力",
+      "img": "jianying.png",
+      "link": "https://www.jianying.com",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "description": "AI数字人视频生成平台",
+      "img": "heygen.png",
+      "link": "https://www.heygen.com",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "description": "AI数字人讲解视频平台",
+      "img": "synthesia.png",
+      "link": "https://www.synthesia.io",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "pixverse",
+      "name": "PixVerse",
+      "description": "AI视频生成工具",
+      "img": "pixverse.png",
+      "link": "https://pixverse.ai",
+      "sections": ["AI视频"]
+    },
+    {
+      "id": "tongyiwanxiang",
+      "name": "通义万相",
+      "description": "阿里推出的图像与视频生成模型",
+      "img": "tongyiwanxiang.png",
+      "link": "https://tongyi.aliyun.com/wanxiang",
+      "sections": ["AI视频", "AI绘画"]
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "description": "AI音乐生成平台",
+      "img": "suno.png",
+      "link": "https://suno.com",
+      "sections": ["AI热门工具", "AI音频"]
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "description": "AI音乐生成工具",
+      "img": "udio.png",
+      "link": "https://www.udio.com",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "description": "AI语音合成与声音克隆平台",
+      "img": "elevenlabs.png",
+      "link": "https://elevenlabs.io",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "fishaudio",
+      "name": "Fish Audio",
+      "description": "AI语音合成与声音克隆工具",
+      "img": "fishaudio.png",
+      "link": "https://fish.audio",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "tianyin",
+      "name": "网易天音",
+      "description": "网易推出的AI音乐创作平台",
+      "img": "tianyin.png",
+      "link": "https://tianyin.music.163.com",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "moyin",
+      "name": "魔音工坊",
+      "description": "AI配音工具",
+      "img": "moyin.png",
+      "link": "https://www.moyin.com",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "xunfeipeiyin",
+      "name": "讯飞配音",
+      "description": "科大讯飞推出的AI配音平台",
+      "img": "xunfeipeiyin.png",
+      "link": "https://peiyin.xunfei.cn",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "stableaudio",
+      "name": "Stable Audio",
+      "description": "Stability AI推出的音频生成工具",
+      "img": "stableaudio.png",
+      "link": "https://www.stableaudio.com",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "aiva",
+      "name": "AIVA",
+      "description": "AI作曲平台",
+      "img": "aiva.png",
+      "link": "https://www.aiva.ai",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "mubert",
+      "name": "Mubert",
+      "description": "AI生成免版税音乐",
+      "img": "mubert.png",
+      "link": "https://mubert.com",
+      "sections": ["AI音频"]
+    },
+    {
+      "id": "wpsai",
+      "name": "WPS AI",
+      "description": "金山办公推出的AI办公助手",
+      "img": "wpsai.png",
+      "link": "https://ai.wps.cn",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "description": "AI生成演示文稿与文档",
+      "img": "gamma.jpg",
+      "link": "https://gamma.app",
+      "sections": ["AI热门工具", "AI办公"]
+    },
+    {
+      "id": "aippt",
+      "name": "AiPPT",
+      "description": "一句话生成PPT",
+      "img": "aippt.png",
+      "link": "https://www.aippt.cn",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "zhiwen",
+      "name": "讯飞智文",
+      "description": "讯飞推出的AI文档生成工具",
+      "img": "zhiwen.png",
+      "link": "https://zhiwen.xfyun.cn",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "notion",
+      "name": "Notion AI",
+      "description": "Notion内置的AI写作与知识管理能力",
+      "img": "notion.png",
+      "link": "https://www.notion.so",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "tingwu",
+      "name": "通义听悟",
+      "description": "阿里推出的音视频转写与总结工具",
+      "img": "tingwu.png",
+      "link": "https://tingwu.aliyun.com",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "iflyrec",
+      "name": "讯飞听见",
+      "description": "科大讯飞推出的语音转写平台",
+      "img": "iflyrec.png",
+      "link": "https://www.iflyrec.com",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "description": "AI会议记录与转写工具",
+      "img": "otter.png",
+      "link": "https://otter.ai",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "feishu",
+      "name": "飞书",
+      "description": "字节跳动协作平台，内置AI智能伙伴",
+      "img": "feishu.png",
+      "link": "https://www.feishu.cn",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "boardmix",
+      "name": "boardmix",
+      "description": "在线白板工具，内置AI助手",
+      "img": "boardmix.png",
+      "link": "https://boardmix.cn",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "processon",
+      "name": "ProcessOn",
+      "description": "在线流程图与思维导图，支持AI生成",
+      "img": "processon.png",
+      "link": "https://www.processon.com",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "islide",
+      "name": "iSlide",
+      "description": "PPT设计插件，内置AI排版能力",
+      "img": "islide.png",
+      "link": "https://www.islide.cc",
+      "sections": ["AI办公"]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "description": "AI答案引擎",
+      "img": "perplexity.png",
+      "link": "https://www.perplexity.ai",
+      "sections": ["AI热门工具", "AI搜索"]
+    },
+    {
+      "id": "metaso",
+      "name": "秘塔AI搜索",
+      "description": "没有广告的AI搜索引擎",
+      "img": "metaso.png",
+      "link": "https://metaso.cn",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "quark",
+      "name": "夸克",
+      "description": "阿里推出的智能搜索App",
+      "img": "quark.png",
+      "link": "https://www.quark.cn",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "phind",
+      "name": "Phind",
+      "description": "面向开发者的AI搜索引擎",
+      "img": "phind.png",
+      "link": "https://www.phind.com",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "thinkany",
+      "name": "ThinkAny",
+      "description": "AI搜索引擎",
+      "img": "thinkany.png",
+      "link": "https://thinkany.ai",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "you",
+      "name": "You.com",
+      "description": "AI搜索引擎",
+      "img": "you.png",
+      "link": "https://you.com",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "description": "学术论文AI搜索引擎",
+      "img": "consensus.png",
+      "link": "https://consensus.app",
+      "sections": ["AI搜索"]
+    },
+    {
+      "id": "infoq",
+      "name": "InfoQ 中文站",
+      "description": "软件开发者社区，设有AI资讯专区",
+      "img": "infoq.png",
+      "link": "https://www.infoq.cn",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "leiphone",
+      "name": "雷锋网",
+      "description": "关注人工智能与智能硬件的科技媒体",
+      "img": "leiphone.png",
+      "link": "https://www.leiphone.com",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "aibase",
+      "name": "AIbase",
+      "description": "AI产品榜与资讯平台",
+      "img": "aibase.png",
+      "link": "https://www.aibase.com",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "description": "Claude系列模型API",
+      "img": "anthropic.png",
+      "link": "https://www.anthropic.com",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "description": "欧洲开源大模型API",
+      "img": "mistral.png",
+      "link": "https://mistral.ai",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "description": "多模型统一API网关",
+      "img": "openrouter.png",
+      "link": "https://openrouter.ai",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "description": "开源模型推理云平台",
+      "img": "together.png",
+      "link": "https://www.together.ai",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "description": "高速推理云平台",
+      "img": "groq.png",
+      "link": "https://groq.com",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "siliconflow",
+      "name": "硅基流动",
+      "description": "国内大模型API聚合平台",
+      "img": "siliconflow.png",
+      "link": "https://siliconflow.cn",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "bigmodel",
+      "name": "智谱AI开放平台",
+      "description": "GLM系列模型API",
+      "img": "bigmodel.png",
+      "link": "https://www.bigmodel.cn",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot AI 开放平台",
+      "description": "Kimi系列模型API",
+      "img": "moonshot.png",
+      "link": "https://platform.moonshot.cn",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "volcengine",
+      "name": "火山方舟",
+      "description": "字节跳动大模型服务平台",
+      "img": "volcengine.png",
+      "link": "https://www.volcengine.com",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "bailian",
+      "name": "阿里云百炼",
+      "description": "阿里大模型服务平台",
+      "img": "bailian.png",
+      "link": "https://www.aliyun.com/product/bailian",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "description": "云端运行开源模型",
+      "img": "replicate.png",
+      "link": "https://replicate.com",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "description": "开源模型社区与推理API",
+      "img": "huggingface.png",
+      "link": "https://huggingface.co",
+      "sections": ["大模型API"]
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "description": "开源LLM应用开发平台",
+      "img": "dify.png",
+      "link": "https://dify.ai",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "fastgpt",
+      "name": "FastGPT",
+      "description": "开源知识库问答系统",
+      "img": "fastgpt.png",
+      "link": "https://fastgpt.in",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "yuanqi",
+      "name": "腾讯元器",
+      "description": "腾讯推出的智能体创作平台",
+      "img": "yuanqi.png",
+      "link": "https://yuanqi.tencent.com",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "description": "自动化工作流平台，内置AI能力",
+      "img": "zapier.png",
+      "link": "https://zapier.com",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "description": "可视化自动化工作流平台",
+      "img": "make.png",
+      "link": "https://www.make.com",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "description": "开源工作流自动化平台",
+      "img": "n8n.png",
+      "link": "https://n8n.io",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "description": "通用AI Agent",
+      "img": "manus.png",
+      "link": "https://manus.im",
+      "sections": ["AI热门工具", "Agent工具"]
+    },
+    {
+      "id": "genspark",
+      "name": "Genspark",
+      "description": "AI Agent搜索引擎",
+      "img": "genspark.png",
+      "link": "https://www.genspark.ai",
+      "sections": ["Agent工具", "AI搜索"]
+    },
+    {
+      "id": "flowise",
+      "name": "Flowise",
+      "description": "可视化搭建LLM应用",
+      "img": "flowise.png",
+      "link": "https://flowiseai.com",
+      "sections": ["Agent工具"]
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "description": "多智能体协作框架",
+      "img": "crewai.png",
+      "link": "https://www.crewai.com",
       "sections": ["Agent工具"]
     }
   ]
