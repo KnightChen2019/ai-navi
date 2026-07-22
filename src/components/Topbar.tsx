@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Sparkles, Menu, Heart } from "lucide-react";
+import { Search, Sparkles, Menu, Heart, Plus } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useFavorites } from "@/lib/useFavorites";
 
@@ -52,6 +52,13 @@ export default function Topbar() {
       </button>
 
       <div className="ml-auto flex shrink-0 items-center gap-2">
+        <Link
+          href="/submit"
+          aria-label="推荐工具"
+          className="glass-subtle inline-flex h-9 w-9 items-center justify-center rounded-xl text-slate-600 transition-colors hover:text-brand dark:text-slate-300"
+        >
+          <Plus size={18} />
+        </Link>
         <Link
           href="/favorites"
           aria-label={`我的收藏（${count}）`}

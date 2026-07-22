@@ -60,6 +60,7 @@ npm run dev
 ```
 
 - 新增工具：在 `tools` 里加一项（`img` 先写 `<id>.png`），再运行 `npm run fetch-icons` 自动抓图标到 `public/img/`；抓不到时手动放图。
+- 访客投稿：站点 `/submit` 页的推荐会写入 `data/submissions.json`，人工审核后合并进 `data.json` 并删除对应条目。
 - 调整分类顺序：改 `sections` 数组顺序即可（侧边栏图标映射在 `src/components/Sidebar.tsx`）。
 - 提交前可运行 `npm run validate` 自检；`npm run build` 也会自动校验。
 
