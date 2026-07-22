@@ -9,6 +9,7 @@
     "AI音频",
     "AI办公",
     "AI搜索",
+    "AI金融",
     "AI新闻",
     "大模型API",
     "Agent工具"
@@ -1353,6 +1354,138 @@
       "pricing": "free",
       "origin": "global",
       "sections": ["Agent工具"]
+    },
+    {
+      "id": "iwencai",
+      "name": "同花顺i问财",
+      "description": "同花顺推出的AI选股工具，支持自然语言查询股票",
+      "img": "iwencai.png",
+      "link": "https://www.iwencai.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "eastmoneychoice",
+      "name": "东方财富妙想",
+      "description": "东方财富Choice数据推出的AI金融助理",
+      "img": "eastmoneychoice.png",
+      "link": "https://choice.eastmoney.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "xueqiu",
+      "name": "雪球",
+      "description": "投资者社区与行情数据平台",
+      "img": "xueqiu.png",
+      "link": "https://xueqiu.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "tradingview",
+      "name": "TradingView",
+      "description": "全球行情图表与交易分析社区",
+      "img": "tradingview.png",
+      "link": "https://www.tradingview.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "investing",
+      "name": "英为财情",
+      "description": "全球金融市场数据与资讯平台",
+      "img": "investing.png",
+      "link": "https://cn.investing.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "datayes",
+      "name": "萝卜投研",
+      "description": "通联数据推出的AI投研平台",
+      "img": "datayes.png",
+      "link": "https://robo.datayes.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "bigquant",
+      "name": "BigQuant",
+      "description": "AI量化投资平台",
+      "img": "bigquant.png",
+      "link": "https://bigquant.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "joinquant",
+      "name": "聚宽",
+      "description": "量化交易研究平台",
+      "img": "joinquant.png",
+      "link": "https://www.joinquant.com",
+      "addedAt": "2026-07-22",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": ["AI金融"]
+    },
+    {
+      "id": "36kr",
+      "name": "36氪",
+      "description": "关注新经济与科技的资讯平台",
+      "img": "36kr.png",
+      "link": "https://36kr.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "description": "科技与商业资讯平台",
+      "img": "huxiu.png",
+      "link": "https://www.huxiu.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "tmtpost",
+      "name": "钛媒体",
+      "description": "科技与财经资讯平台",
+      "img": "tmtpost.png",
+      "link": "https://www.tmtpost.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["AI新闻"]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "description": "关注科技与生活方式的媒体",
+      "img": "ifanr.png",
+      "link": "https://www.ifanr.com",
+      "addedAt": "2026-07-22",
+      "pricing": "free",
+      "origin": "cn",
+      "sections": ["AI新闻"]
     }
   ]
 }
