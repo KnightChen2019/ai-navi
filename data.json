@@ -25,7 +25,11 @@
       "pricing": "freemium",
       "origin": "cn",
       "detail": "豆包是字节跳动推出的全能 AI 助手，依托豆包大模型，覆盖日常问答、写作、翻译、图像生成与语音通话等场景，提供网页版与多端 App。\n\n### 核心亮点\n\n- 对话、写作、绘画、语音通话一体化，功能覆盖全面\n- 支持拍照答疑、文档总结等实用能力\n- 多端同步，手机与电脑体验一致\n\n基础功能**免费**使用，适合作为日常 AI 入门助手。",
-      "sections": ["AI热门工具", "AI对话聊天", "AI文本工具"]
+      "sections": [
+        "AI热门工具",
+        "AI对话聊天",
+        "AI文本工具"
+      ]
     },
     {
       "id": "deepseek",
@@ -37,7 +41,12 @@
       "pricing": "freemium",
       "origin": "cn",
       "detail": "DeepSeek 是深度求索推出的开源大模型，以出色的推理、代码与数学能力著称。网页与 App 端可免费对话，模型权重开源可本地部署，API 价格亲民。\n\n### 核心亮点\n\n- 推理与代码能力处于第一梯队\n- 开源权重，支持私有化部署\n- API 定价远低于同类模型\n\n对话功能**免费**，API 按量计费，开发者与普通用户皆宜。",
-      "sections": ["AI热门工具", "AI对话聊天", "AI文本工具", "大模型API"]
+      "sections": [
+        "AI热门工具",
+        "AI对话聊天",
+        "AI文本工具",
+        "大模型API"
+      ]
     },
     {
       "id": "tongyiqianwen",
@@ -48,7 +57,11 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天", "大模型API"]
+      "sections": [
+        "AI对话聊天",
+        "大模型API"
+      ],
+      "detail": "通义千问是阿里云推出的综合 AI 助手。支持文本对话、文档分析、图像理解、代码生成与语音交互，并集成在钉钉、阿里云等企业级场景中。对话功能**免费**使用，通过插件生态可扩展联网搜索、图片生成等能力。"
     },
     {
       "id": "wenxinyiyan",
@@ -59,7 +72,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "文心一言是百度研发的 AI 对话产品，基于文心大模型 4.0。集成了百度搜索生态，可实时联网获取最新信息，并支持图片生成、文档处理与应用调用。部分功能**免费**，高级模式按需付费。"
     },
     {
       "id": "chatgpt",
@@ -70,7 +86,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "ChatGPT 是最具影响力的 AI 对话产品，基于 OpenAI GPT-4o 系列模型。支持文本对话、图像分析、代码执行、文件上传与数据可视化，插件商店扩展丰富。**部分免费**使用（GPT-4o mini 额度内免费），Plus/Pro 会员解锁 GPT-4o 完整能力与 DALL·E 绘图。"
     },
     {
       "id": "claude",
@@ -81,7 +100,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Claude 是 Anthropic 推出的 AI 助手，以长文本理解、安全性和细腻的写作风格著称。支持 200K token 上下文窗口，适合长文档分析、研究综述与创意写作。**部分免费**，专业版解锁更高用量。"
     },
     {
       "id": "cursor",
@@ -92,7 +114,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Cursor 是 AI-native 的代码编辑器，底层基于 VS Code，深度集成 GPT-4o/Claude 模型。支持整行补全、多文件编辑、自然语言重构。**部分免费**，Pro 版提供完整代码补全与每日 500 次高级对话。"
     },
     {
       "id": "windsurf",
@@ -103,7 +128,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Windsurf 是一款 AI 驱动的新一代 IDE，独创 Cascade 模式。支持跨文件智能补全、代码库理解与 Agent 自主执行。**部分免费**，Pro 版解锁无限补全与更高并发。"
     },
     {
       "id": "bolt",
@@ -114,7 +142,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Bolt 可基于一句话描述直接生成并部署全栈 Web 应用。支持 React/Vue/Svelte 前端、Node/Express 后端并内置数据库与部署。**部分免费**，付费解锁私有代码库与更高 API 额度。"
     },
     {
       "id": "jimeng",
@@ -125,7 +156,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "即梦 AI 是字节跳动推出的 AI 图像与视频创作平台。支持文生图/视频、图生视频及图片编辑，提供海量风格模板与社区素材。**部分免费**，每日赠送点数。"
     },
     {
       "id": "midjourney",
@@ -136,7 +170,10 @@
       "addedAt": "2025-12-03",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "Midjourney 是目前品质最高的 AI 图像生成服务之一，以艺术性、光影质感和风格多样性著称。通过 Discord 使用，支持文生图、图生图、局部重绘等。**纯付费**服务，按月订阅。"
     },
     {
       "id": "qbitai",
@@ -147,7 +184,10 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "量子位是关注 AI 技术与产业的前沿科技媒体。每日报道 AI 行业动态、学术突破与投融资事件，覆盖大模型、自动驾驶、机器人等赛道。**免费**阅读。"
     },
     {
       "id": "jiqizhixin",
@@ -158,7 +198,10 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "机器之心是 AI 领域领先的科技媒体与社区平台。专注于 AI 学术进展、技术实践与产业趋势报道，提供深度分析、论文解读与技术博客。**免费**阅读。"
     },
     {
       "id": "51cto",
@@ -169,7 +212,10 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "51CTO 是国内最大的 IT 技术社区之一，其 AI 频道覆盖大模型开发、机器学习、AIGC 应用等技术内容。提供教程、资讯与技术博客。**免费**阅读。"
     },
     {
       "id": "openai",
@@ -180,7 +226,10 @@
       "addedAt": "2025-12-03",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "OpenAI 提供 GPT-4o、DALL·E 与 Whisper 等前沿模型的 API 服务，是 AI 开发者的核心基础设施之一。按 token 计费，多模态模型支持图像、音频输入与函数调用。"
     },
     {
       "id": "gemini",
@@ -191,7 +240,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Gemini 是 Google 推出的多模态大模型系列，覆盖 text-only 到全模态的 Nano/Pro/Ultra 三档。通过 Google AI Studio 与 Vertex AI 提供，支持 1M token 上下文与 Google 搜索增强。**部分免费**（速率限制内免费）。"
     },
     {
       "id": "llama",
@@ -202,7 +254,10 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Llama 是 Meta 开源的大语言模型系列（3.1/3.2）。模型权重完全开源，支持本地部署与微调，覆盖 8B 到 405B 多种规格。通过官网或 Hugging Face 下载使用，API 通过合作商提供。"
     },
     {
       "id": "coze",
@@ -213,7 +268,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "Coze（扣子）是字节跳动推出的 AI Bot 开发平台。无需编码即可创建智能助手，内置知识库、插件、工作流与多 Agent 编排，一键发布到飞书、微信等渠道。**部分免费**。"
     },
     {
       "id": "gpts",
@@ -224,7 +282,10 @@
       "addedAt": "2025-12-03",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "GPTs 是 OpenAI GPT-4o 生态下的自定义 AI 应用。用户可通过对话式配置构建专属助手，支持知识文件上传、联网搜索与工具调用，并发布到 GPT Store。ChatGPT Plus 及以上用户可用。"
     },
     {
       "id": "langchain",
@@ -235,7 +296,10 @@
       "addedAt": "2025-12-03",
       "pricing": "free",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "LangChain 是构建 LLM 应用的顶级开源框架。提供了链、Agent、RAG、工具集成等抽象，支持数十种模型提供商与向量数据库，是 AI 应用开发的核心基础设施。**免费**开源。"
     },
     {
       "id": "kimi",
@@ -247,7 +311,11 @@
       "pricing": "freemium",
       "origin": "cn",
       "detail": "Kimi 是月之暗面推出的 AI 助手，以超长上下文见长，擅长长文档阅读、资料整理与搜索问答，并提供 PPT 助手等实用功能。\n\n### 核心亮点\n\n- 超长上下文，适合处理论文、合同、财报等长文档\n- 联网搜索与文档解析能力完善\n- 支持 PPT 生成、会议记录等办公场景\n\n基础功能**免费**，高频使用可开通会员。",
-      "sections": ["AI热门工具", "AI对话聊天", "AI文本工具"]
+      "sections": [
+        "AI热门工具",
+        "AI对话聊天",
+        "AI文本工具"
+      ]
     },
     {
       "id": "yuanbao",
@@ -258,7 +326,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "腾讯元宝是基于腾讯混元大模型的 AI 助手 App。支持对话问答、文档分析、图片识别与联网搜索，与微信、QQ 等腾讯生态深度整合，提供小程序的便捷接入。**免费**使用。"
     },
     {
       "id": "xinghuo",
@@ -269,7 +340,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "讯飞星火是科大讯飞推出的 AI 对话助手，具备文本生成、语音交互与图像理解能力。在中文语音交互与行业应用方面积累深厚，支持 PC 端与移动端。**部分免费**。"
     },
     {
       "id": "chatglm",
@@ -280,7 +354,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "智谱清言（ChatGLM）是智谱 AI 推出的通用对话助手。基于自研 GLM 大模型，支持多轮对话、文档分析、代码生成与联网搜索。对话功能**免费**，提供 API 服务。"
     },
     {
       "id": "baichuan",
@@ -291,7 +368,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "百川智能是搜狗前 CEO 王小川创立的 AI 公司。百川大模型在中文理解与知识问答方面表现突出，支持对话、文档处理与搜索增强。对话**部分免费**，开放平台提供 API。"
     },
     {
       "id": "tiangong",
@@ -302,7 +382,11 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI对话聊天", "AI搜索"]
+      "sections": [
+        "AI对话聊天",
+        "AI搜索"
+      ],
+      "detail": "天工 AI 是昆仑万维推出的综合 AI 搜索与对话产品。首创「搜索+对话」模式，支持实时联网获取最新信息，并提供文档分析与 AI 绘画能力。**部分免费**。"
     },
     {
       "id": "grok",
@@ -313,7 +397,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Grok 是 xAI 公司推出的 AI 助手，以实时数据访问和「叛逆」风格著称。通过 X（原 Twitter）平台深度整合，可获取实时社交媒体信息。X Premium 订阅用户**免费**使用。"
     },
     {
       "id": "poe",
@@ -324,7 +411,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Poe 是 Quora 推出的 AI 聊天聚合平台，在一个界面内使用 GPT-4o、Claude、Gemini 等数十种模型。支持对话对比、Bot 自定义与 API 订阅。**部分免费**，月度订阅解锁更多额度。"
     },
     {
       "id": "characterai",
@@ -335,7 +425,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Character.AI 是 AI 角色扮演与对话平台，用户可以和各种虚拟角色互动或创建自己的角色。创新性的角色人格设计使其在娱乐与创意领域广受欢迎。**部分免费**。"
     },
     {
       "id": "mistralchat",
@@ -346,7 +439,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Le Chat 是 Mistral AI 推出的对话助手。Mistral 在开放权重模型方面表现出色（Mistral 7B/Mixtral 8x7B），在代码与推理任务上性价比突出。**部分免费**，API 按量计费。"
     },
     {
       "id": "copilot",
@@ -357,7 +453,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI对话聊天"]
+      "sections": [
+        "AI对话聊天"
+      ],
+      "detail": "Microsoft Copilot 是微软基于 GPT-4 的 AI 助手，深度集成在 Windows、Edge 和 Office 生态中。支持联网搜索、图片生成（DALL·E 3）与文档分析，在 Bing 搜索中可直接使用。**部分免费**。"
     },
     {
       "id": "xiezuocat",
@@ -368,7 +467,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "秘塔写作猫是 AI 写作辅助工具，专注于中文内容创作。支持文案润色、文章续写、标题生成与多语言翻译，适合自媒体运营、营销写作等场景。**部分免费**。"
     },
     {
       "id": "ibiling",
@@ -379,7 +481,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "笔灵 AI 写作是专注于学术与职场写作的 AI 工具。覆盖论文大纲、开题报告、工作周报等多种模板，帮助结构化生成内容。**部分免费**，高级模板需付费。"
     },
     {
       "id": "shenyandayi",
@@ -390,7 +495,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "深言达意是基于大模型的语义搜索引擎与写作辅助工具。提供近义词、例句检索与文本润色，支持中英双语，适合写作与翻译场景。**免费**使用。"
     },
     {
       "id": "pitaya",
@@ -401,7 +509,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "火龙果写作是集 AI 写作、翻译、润色于一体的智能写作助手。提供网页插件与桌面端，支持划词翻译、语法纠错、全文改写等功能。**部分免费**。"
     },
     {
       "id": "grammarly",
@@ -412,7 +523,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "Grammarly 是全球最受欢迎的 AI 英文写作助手。提供拼写检查、语法纠错、语气调整与风格建议，原生集成浏览器与各类文档应用。**部分免费**，Premium 解锁完整功能。"
     },
     {
       "id": "quillbot",
@@ -423,7 +537,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI文本工具"]
+      "sections": [
+        "AI文本工具"
+      ],
+      "detail": "QuillBot 是专业的 AI 文本改写与润色工具。提供多种改写模式（标准、流畅、创意等），集成摘要生成、语法检查与引用生成功能。**部分免费**。"
     },
     {
       "id": "githubcopilot",
@@ -434,7 +551,10 @@
       "addedAt": "2026-07-22",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "GitHub Copilot 是 GitHub 和 OpenAI 联合推出的 AI 编程助手。可实时生成完整函数和代码块，支持 VS Code、JetBrains 等主流 IDE。**付费**服务，学生和开源维护者免费。"
     },
     {
       "id": "trae",
@@ -445,7 +565,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Trae 是字节跳动推出的 AI-native IDE，专为中文开发者优化。深度集成豆包大模型，支持对话式编程、代码审查与项目脚手架生成。**免费**使用。"
     },
     {
       "id": "v0",
@@ -456,7 +579,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "v0 是 Vercel 推出的 AI 前端生成工具。通过自然语言描述直接生成 React 组件与 UI 页面，内置 Tailwind CSS 与 shadcn/ui 组件库。**部分免费**。"
     },
     {
       "id": "lovable",
@@ -467,7 +593,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Lovable 是 AI 驱动的全栈应用生成平台。通过对话式描述即可构建带数据库和后端的 Web 应用，支持 Supabase 集成与一键部署。**部分免费**。"
     },
     {
       "id": "codeium",
@@ -478,7 +607,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Codeium 是免费的 AI 代码补全与搜索工具，覆盖 70+ 编程语言和 40+ IDE。提供自动补全、代码搜索与自然语言问答，性能出色且对个人开发者**免费**。"
     },
     {
       "id": "tongyilingma",
@@ -489,7 +621,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "通义灵码是阿里云推出的 AI 编程助手，基于通义大模型。支持代码生成、单元测试编写、代码解释与优化，深度集成主流 IDE。个人版**免费**。"
     },
     {
       "id": "codegeex",
@@ -500,7 +635,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "CodeGeeX 是智谱 AI 开源的 AI 编程助手，支持多语言代码生成与翻译。提供 IDE 插件，具有代码补全、注释生成与代码转换功能。个人使用**部分免费**。"
     },
     {
       "id": "comate",
@@ -511,7 +649,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "文心快码（Comate）是百度基于文心大模型的 AI 编程助手。支持单行/多行代码生成、代码解释与缺陷定位，深度适配百度生态与飞桨框架。个人版**部分免费**。"
     },
     {
       "id": "replit",
@@ -522,7 +663,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Replit 是基于浏览器的在线 IDE 与部署平台，集成了 AI 编程助手 Ghostwriter。无需本地配置即可编写、运行和部署应用，覆盖 50+ 编程语言。**部分免费**。"
     },
     {
       "id": "tabnine",
@@ -533,7 +677,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI编程工具"]
+      "sections": [
+        "AI编程工具"
+      ],
+      "detail": "Tabnine 是 AI 代码补全工具，率先推出基于本地模型的方案。支持代码补全、自然语言代码生成与测试生成，提供云端与本地运行模式。**部分免费**。"
     },
     {
       "id": "stablediffusion",
@@ -544,7 +691,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "global",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "Stable Diffusion 是 Stability AI 推出的开源图像生成模型。支持文生图、图生图、修补与扩展，社区生态有大量 LoRA 和 ControlNet 扩展。**免费**开源，在线服务需付费。"
     },
     {
       "id": "yige",
@@ -555,7 +705,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "文心一格是百度推出的 AI 图像创作平台。基于文心大模型，支持文生图、图生图与图片编辑，提供中国风艺术风格和商用授权。使用百度账号登录有免费额度。"
     },
     {
       "id": "liblib",
@@ -566,7 +719,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "LiblibAI 是国内流行的 AI 模型社区与在线生成平台。提供海量 Stable Diffusion 模型、LoRA 与在线生图工作流，无需本地 GPU 即可使用社区模型。**部分免费**。"
     },
     {
       "id": "tusiart",
@@ -577,7 +733,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "吐司 AI 是国内活跃的 AI 创作社区与生图平台。支持 SD 模型在线生图、模型训练与分享，提供丰富的提示词库与风格模板。**部分免费**。"
     },
     {
       "id": "leonardo",
@@ -588,7 +747,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "Leonardo.Ai 是面向游戏资产与设计的 AI 图像生成平台。提供丰富的模型选择、画布编辑与批量生成功能，支持风格一致性的角色资产生成。**部分免费**，每日赠送点数。"
     },
     {
       "id": "ideogram",
@@ -599,7 +761,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "Ideogram 在 AI 图像文字渲染方面独具优势，可生成包含清晰文字的海报、Logo 与社交媒体图片。提供多种风格模型与画布编辑。**部分免费**。"
     },
     {
       "id": "recraft",
@@ -610,7 +775,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "Recraft 是专注品牌视觉一致的 AI 设计平台。支持生成 SVG 矢量图标、Logo 与品牌素材，可设定品牌色板与风格指南。**部分免费**，专业版解锁矢量导出。"
     },
     {
       "id": "gaoding",
@@ -621,7 +789,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI绘画"]
+      "sections": [
+        "AI绘画"
+      ],
+      "detail": "稿定设计是面向国内市场的在线设计平台，集成了 AI 生图功能。提供海量社交与电商模板，通过 AI 快速生成营销素材、海报与视频封面。**部分免费**。"
     },
     {
       "id": "kling",
@@ -633,7 +804,10 @@
       "pricing": "freemium",
       "origin": "cn",
       "detail": "可灵 AI 是快手推出的视频生成大模型，支持文生视频与图生视频，生成质量与动作连贯性表现出色，是国内视频创作的热门工具。\n\n### 核心亮点\n\n- 文生视频、图生视频，画面质感优秀\n- 支持视频续写，可生成更长片段\n- 中文提示词理解到位\n\n每日赠送免费额度，高频创作可开通会员。",
-      "sections": ["AI热门工具", "AI视频"]
+      "sections": [
+        "AI热门工具",
+        "AI视频"
+      ]
     },
     {
       "id": "hailuo",
@@ -644,7 +818,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "海螺 AI 是 MiniMax 推出的 AI 视频生成平台。基于自研模型支持文生视频与图生视频，在镜头运动与场景自然度方面表现突出。**部分免费**。"
     },
     {
       "id": "vidu",
@@ -655,7 +832,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "Vidu 是生数科技联合清华推出的 AI 视频生成平台。采用自研 U-ViT 架构，支持长视频生成、参考视频风格迁移与镜头控制。**部分免费**。"
     },
     {
       "id": "runway",
@@ -666,7 +846,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "Runway 是领先的 AI 视频创作平台，提供文生视频、视频修编、动态笔刷、背景替换等数十种 AI 工具。Gen-3 模型在动作一致性与影视级画质上表现优异。**部分免费**，按需付费。"
     },
     {
       "id": "pika",
@@ -677,7 +860,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "Pika 是轻量易用的 AI 视频生成平台，以快速生成和高品质著称。支持文生视频、图生视频、视频编辑与局部修改，适合社交媒体内容创作。**部分免费**。"
     },
     {
       "id": "luma",
@@ -688,7 +874,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "Luma Dream Machine 是 Luma AI 推出的视频生成模型，以物理理解准确、镜头运动流畅、影视感强著称。支持文生视频与图片驱动视频生成。**部分免费**。"
     },
     {
       "id": "sora",
@@ -700,7 +889,10 @@
       "pricing": "paid",
       "origin": "global",
       "detail": "Sora 是 OpenAI 推出的视频生成模型，可根据文字或图片生成电影感视频，对物理规律与场景连贯性的理解处于业界前列。\n\n### 核心亮点\n\n- 文生视频、图生视频，画面真实感强\n- 支持故事板等多镜头创作\n- 与 ChatGPT 账号体系打通\n\n需订阅 ChatGPT 付费计划后使用，适合专业创作者。",
-      "sections": ["AI热门工具", "AI视频"]
+      "sections": [
+        "AI热门工具",
+        "AI视频"
+      ]
     },
     {
       "id": "jianying",
@@ -711,7 +903,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "剪映是字节跳动推出的全能视频剪辑 App，深度集成 AI 能力。提供 AI 数字人、智能文案生成、自动字幕、AI 视频扩图等功能，抖音创作者标配。**部分免费**。"
     },
     {
       "id": "heygen",
@@ -722,7 +917,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "HeyGen 是 AI 数字人生成平台，支持从照片或文字生成逼真的数字人视频。提供 100+ 虚拟形象与多语言语音合成，适合营销视频与培训内容制作。**部分免费**。"
     },
     {
       "id": "synthesia",
@@ -733,7 +931,10 @@
       "addedAt": "2026-07-22",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "Synthesia 是面向企业的 AI 数字人视频平台。支持从文字生成由 AI 虚拟人播报的专业视频，提供 140+ 虚拟形象与 120+ 语言，无需摄像机与演员。**付费**服务。"
     },
     {
       "id": "pixverse",
@@ -744,7 +945,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI视频"]
+      "sections": [
+        "AI视频"
+      ],
+      "detail": "PixVerse 是 AI 视频生成平台，在创意风格与影视感方面表现突出。支持文生视频、图生视频与视频风格迁移。**部分免费**。"
     },
     {
       "id": "tongyiwanxiang",
@@ -755,7 +959,11 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI视频", "AI绘画"]
+      "sections": [
+        "AI视频",
+        "AI绘画"
+      ],
+      "detail": "通义万相是阿里云推出的 AI 视频与图像生成平台。支持文生视频、图生视频与图像风格化，依托通义大模型系列，在中文场景理解上表现良好。**部分免费**。"
     },
     {
       "id": "suno",
@@ -767,7 +975,10 @@
       "pricing": "freemium",
       "origin": "global",
       "detail": "Suno 是 AI 音乐生成平台，输入歌词或一段描述即可生成包含人声的完整歌曲，支持多种曲风，是音乐创作零门槛的代表工具。\n\n### 核心亮点\n\n- 一键生成带人声的完整歌曲\n- 曲风覆盖流行、摇滚、电子、古典等\n- 支持自定义歌词与风格标签\n\n每日赠送免费额度，商用与高频创作需订阅。",
-      "sections": ["AI热门工具", "AI音频"]
+      "sections": [
+        "AI热门工具",
+        "AI音频"
+      ]
     },
     {
       "id": "udio",
@@ -778,7 +989,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "Udio 是 AI 音乐生成平台，由前 Google DeepMind 团队成员创建。支持从文字描述生成完整歌曲，涵盖多种音乐风格，人声与旋律质量在同类产品中领先。**部分免费**。"
     },
     {
       "id": "elevenlabs",
@@ -789,7 +1003,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "ElevenLabs 是业界领先的 AI 语音合成平台。提供超逼真的文本转语音、声音克隆与语音翻译，支持 30+ 语言，在音色自然度与情感表达上全球领先。**部分免费**。"
     },
     {
       "id": "fishaudio",
@@ -800,7 +1017,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "Fish Audio 是开源 AI 语音合成平台，支持声音克隆与多语言文本转语音。技术栈完全开源，可在本地部署，适合对数据隐私要求较高的用户。**部分免费**。"
     },
     {
       "id": "tianyin",
@@ -811,7 +1031,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "网易天音是网易推出的 AI 音乐创作平台。围绕人声合成与歌曲生成，提供歌词创作、旋律生成与完整编曲能力，适合音乐爱好者和短视频创作者。**部分免费**。"
     },
     {
       "id": "moyin",
@@ -822,7 +1045,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "魔音工坊是国内知名的 AI 配音平台，提供数百种音色选择与情感化语音合成。支持长文本配音、多角色对话与短视频配音，内容创作者广泛使用。**部分免费**。"
     },
     {
       "id": "xunfeipeiyin",
@@ -833,7 +1059,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "讯飞配音是科大讯飞推出的专业 AI 配音工具。依托讯飞语音合成技术，提供数百种高质量音色，支持情感调节、多音字纠正等专业功能。**部分免费**。"
     },
     {
       "id": "stableaudio",
@@ -844,7 +1073,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "Stable Audio 是 Stability AI 推出的 AI 音乐与音效生成平台。支持从文字生成最长 2 分钟的高质量音乐片段，适合背景音乐与视频配乐制作。**部分免费**。"
     },
     {
       "id": "aiva",
@@ -855,7 +1087,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "AIVA 是专注于古典与影视配乐的 AI 作曲平台。通过深度学习分析大量乐谱创作交响乐、室内乐等作品，被用于游戏配乐与电影预告片。**部分免费**。"
     },
     {
       "id": "mubert",
@@ -866,7 +1101,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI音频"]
+      "sections": [
+        "AI音频"
+      ],
+      "detail": "Mubert 是实时 AI 音乐生成平台，为创作者、流媒体与商业场景提供免版税背景音乐。支持按风格、时长与结构实时生成音乐流。**部分免费**。"
     },
     {
       "id": "wpsai",
@@ -877,7 +1115,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "WPS AI 是金山办公旗下 WPS Office 的 AI 助手。提供文档生成、润色、摘要、PPT 制作、表格公式生成等全办公场景 AI 能力，深度集成在 WPS 全家桶中。**部分免费**。"
     },
     {
       "id": "gamma",
@@ -889,7 +1130,10 @@
       "pricing": "freemium",
       "origin": "global",
       "detail": "Gamma 是 AI 演示文稿生成工具，输入主题或大纲即可生成排版精美的 PPT、文档与网页，支持在线编辑与导出，大幅缩短制作时间。\n\n### 核心亮点\n\n- 一句话生成完整 PPT，版式美观\n- 同时支持文档与网页形态\n- 可在线协作编辑，导出 PPT/PDF\n\n提供免费额度，导出与高频使用需订阅。",
-      "sections": ["AI热门工具", "AI办公"]
+      "sections": [
+        "AI热门工具",
+        "AI办公"
+      ]
     },
     {
       "id": "aippt",
@@ -900,7 +1144,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "AiPPT 是 AI 驱动的 PPT 生成工具。输入主题即可自动生成完整演示文稿，提供多种模板风格与内容大纲，支持在线编辑与导出。**部分免费**。"
     },
     {
       "id": "zhiwen",
@@ -911,7 +1158,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "讯飞智文是科大讯飞推出的 AI 文档与 PPT 生成工具。支持从一句话快速生成结构化文稿与演示文稿，内置讯飞星火大模型。**部分免费**。"
     },
     {
       "id": "notion",
@@ -922,7 +1172,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "Notion AI 是 Notion 内置的 AI 助手。支持文档生成、翻译、摘要、会议记录整理与项目规划。**部分免费**，按月订阅解锁 AI 额度。"
     },
     {
       "id": "tingwu",
@@ -933,7 +1186,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "通义听悟是阿里云推出的 AI 会议与音视频转写工具。支持多语种实时/离线转写、发言人识别、AI 摘要与章节划分，适合会议记录与学习笔记。**部分免费**。"
     },
     {
       "id": "iflyrec",
@@ -944,7 +1200,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "讯飞听见是科大讯飞推出的专业语音转文字服务。支持会议、采访、课程等多场景实时转写与翻译，识别准确率行业领先。**部分免费**，专业服务按量计费。"
     },
     {
       "id": "otter",
@@ -955,7 +1214,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "Otter.ai 是面向商务会议的 AI 转录与笔记助手。实时转写会议内容、自动标注发言人、生成智能摘要与行动项。**部分免费**，Pro 版解锁更多转写时长。"
     },
     {
       "id": "feishu",
@@ -966,7 +1228,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "飞书是字节跳动推出的一站式协作平台，深度集成 AI 能力（飞书智能伙伴）。支持 AI 会议纪要、文档辅助创作、智能搜索与客服机器人。**部分免费**。"
     },
     {
       "id": "boardmix",
@@ -977,7 +1242,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "Boardmix 是 AI 驱动的在线协作白板。支持 AI 生成流程图、思维导图、PPT 与头脑风暴，适合产品设计、项目管理与团队协作。**部分免费**。"
     },
     {
       "id": "processon",
@@ -988,7 +1256,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "ProcessOn 是国内专业的在线流程图与思维导图平台。集成 AI 辅助绘图功能，支持流程图、思维导图、原型图等多种图形，多人实时协作编辑。**部分免费**。"
     },
     {
       "id": "islide",
@@ -999,7 +1270,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["AI办公"]
+      "sections": [
+        "AI办公"
+      ],
+      "detail": "iSlide 是 PPT 效率增强工具，支持 AI 辅助 PPT 设计。一键统一字体、配色与版式，提供海量模板与智能排版建议。个人版**部分免费**。"
     },
     {
       "id": "perplexity",
@@ -1011,7 +1285,10 @@
       "pricing": "freemium",
       "origin": "global",
       "detail": "Perplexity 是 AI 答案引擎，针对问题实时检索并给出带引用来源的回答，兼顾搜索引擎的时效性与对话的简洁体验。\n\n### 核心亮点\n\n- 回答附引用来源，可溯源验证\n- 实时联网，时效性强\n- 支持文件上传与深度研究（Pro）\n\n基础搜索**免费**，Pro 版解锁更多模型与深度功能。",
-      "sections": ["AI热门工具", "AI搜索"]
+      "sections": [
+        "AI热门工具",
+        "AI搜索"
+      ]
     },
     {
       "id": "metaso",
@@ -1022,7 +1299,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "秘塔 AI 搜索是新一代 AI 搜索引擎，首创「无广告」搜索体验。搜索结果直接给出结构化摘要与信息来源，并提供深度研究模式。**免费**使用。"
     },
     {
       "id": "quark",
@@ -1033,7 +1313,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "夸克是阿里旗下的智能搜索 App，集成了 AI 助手与多项实用工具。AI 助手支持文档分析、拍照搜索、AI 生图与写作辅助，覆盖学习与办公场景。**免费**使用。"
     },
     {
       "id": "phind",
@@ -1044,7 +1327,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "Phind 是面向开发者的 AI 搜索引擎，为技术问题提供精准答案。基于最新 LLM 与实时网页索引，自动显示答案来源并生成代码片段。**部分免费**。"
     },
     {
       "id": "thinkany",
@@ -1055,7 +1341,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "ThinkAny 是 AI 聚合搜索引擎，同时查询多个 AI 模型获取答案。支持多模型对比、联网搜索与深度推理，帮助用户从不同角度评估回答质量。**部分免费**。"
     },
     {
       "id": "you",
@@ -1066,7 +1355,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "You.com 是 AI 优先的搜索引擎，提供对话式搜索体验。集成了 GPT-4o 等模型，支持实时信息检索、代码生成与图像生成等多模态能力。**部分免费**。"
     },
     {
       "id": "consensus",
@@ -1077,7 +1369,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["AI搜索"]
+      "sections": [
+        "AI搜索"
+      ],
+      "detail": "Consensus 是面向学术研究的 AI 搜索引擎，直接回答科学研究问题。索引 2 亿+ 同行评审论文，提取研究结论并标注引用来源。**部分免费**。"
     },
     {
       "id": "infoq",
@@ -1088,7 +1383,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "InfoQ 中文站是面向技术管理者的深度技术媒体。覆盖大模型、云原生、微服务等前沿技术趋势，提供大会演讲实录、深度文章与技术案例。**免费**阅读。"
     },
     {
       "id": "leiphone",
@@ -1099,7 +1397,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "雷锋网是关注科技与产业的综合科技媒体，AI 频道覆盖大模型、自动驾驶与机器人等前沿领域。提供行业资讯、技术分析与深度报道。**免费**阅读。"
     },
     {
       "id": "aibase",
@@ -1110,7 +1411,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "AIbase 是 AI 产品聚合平台，收录数千款国内外 AI 工具与产品。提供产品分类导航、搜索比较与最新 AI 资讯，适合发现新产品。**免费**使用。"
     },
     {
       "id": "anthropic",
@@ -1121,7 +1425,10 @@
       "addedAt": "2026-07-22",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Anthropic 提供 Claude 系列模型的 API 服务，以长上下文（200K token）、安全对齐与细腻的写作风格著称。按 token 计费，支持文本与代码生成。"
     },
     {
       "id": "mistral",
@@ -1132,7 +1439,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Mistral AI 提供开放权重模型系列（Mistral 7B、Mixtral 8x7B）的 API 与自托管方案。在性价比方面优势明显，支持多语言与代码任务。**部分免费**（开发者套餐）。"
     },
     {
       "id": "openrouter",
@@ -1143,7 +1453,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "OpenRouter 是 AI 模型聚合 API 平台，在一个接口下调用 200+ 模型（GPT、Claude、Llama 等）。支持模型对比、自动重试与用量监控。**部分免费**，提供免费测试额度。"
     },
     {
       "id": "together",
@@ -1154,7 +1467,10 @@
       "addedAt": "2026-07-22",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Together AI 提供开源模型的托管推理与微调 API，包括 Llama、Mistral、DeepSeek 等。专注于高性能推理加速，提供按需与批量处理。**付费**服务。"
     },
     {
       "id": "groq",
@@ -1165,7 +1481,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Groq 以自研 LPU 推理引擎闻名，提供极低延迟的 LLM API。支持 Llama、Mixtral 等主流开源模型，推理速度可达每秒数百 token。**部分免费**（速率限制内免费）。"
     },
     {
       "id": "siliconflow",
@@ -1176,7 +1495,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "硅基流动是国内的 AI 模型云服务平台，提供开源模型推理与部署 API。覆盖 Llama、Qwen、DeepSeek 等主流模型，支持 LoRA 微调。新用户有**免费**额度。"
     },
     {
       "id": "bigmodel",
@@ -1187,7 +1509,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "智谱 AI 开放平台提供 GLM 系列模型的 API 与微调服务。覆盖文本生成、代码、图像理解等多模态能力，支持企业级部署。新用户有**免费**额度。"
     },
     {
       "id": "moonshot",
@@ -1198,7 +1523,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Moonshot AI 开放平台提供月之暗面 Kimi 大模型的 API 服务，以超长上下文处理能力著称。适合长文档分析、研究综述等场景。新用户有**免费**额度。"
     },
     {
       "id": "volcengine",
@@ -1209,7 +1537,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "火山方舟是字节跳动推出的模型服务平台，提供豆包系列模型 API。支持文本生成、图像理解、语音识别等多模态能力。新用户有**免费**额度。"
     },
     {
       "id": "bailian",
@@ -1220,7 +1551,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "阿里云百炼是阿里云的一站式大模型服务平台。提供通义系列 API、模型训练、RAG 应用构建与 Agent 开发。新用户有**免费**额度。"
     },
     {
       "id": "replicate",
@@ -1231,7 +1565,10 @@
       "addedAt": "2026-07-22",
       "pricing": "paid",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Replicate 是开源模型托管平台，提供数百种 AI 模型的云 API。覆盖图像生成、视频、音频、3D 等场景，无需本地 GPU 即可使用主流模型。**付费**服务。"
     },
     {
       "id": "huggingface",
@@ -1242,7 +1579,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["大模型API"]
+      "sections": [
+        "大模型API"
+      ],
+      "detail": "Hugging Face 是最大的 AI 模型社区与平台，提供模型托管、数据集、Spaces 应用与 Inference API。开发者可免费使用数万开源模型。**部分免费**，Pro 版解锁更多算力。"
     },
     {
       "id": "dify",
@@ -1253,7 +1593,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "Dify 是开源的 LLM 应用开发平台。提供可视化 AI 应用编排、RAG 管道、Agent 与工作流，支持多种模型提供商。**部分免费**。"
     },
     {
       "id": "fastgpt",
@@ -1264,7 +1607,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "FastGPT 是开源的 AI 知识库与问答应用平台。基于 RAG 架构，快速构建企业级文档问答、客服机器人等应用。**部分免费**，提供 SaaS 版。"
     },
     {
       "id": "yuanqi",
@@ -1275,7 +1621,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "腾讯元器是腾讯推出的 AI Agent 开发与发布平台。基于混元大模型，支持零代码构建 Bot、知识库与工作流，可发布到微信生态。**免费**使用。"
     },
     {
       "id": "zapier",
@@ -1286,7 +1635,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "Zapier 是领先的自动化工作流平台，Central AI 助手可在 7000+ 应用间自动执行任务。支持条件逻辑、多步骤自动化与 AI 文本处理。**部分免费**。"
     },
     {
       "id": "make",
@@ -1297,7 +1649,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "Make（原 Integromat）是可视化自动化工作流平台。提供丰富的应用连接器与可视化场景编辑器，支持 AI 模块集成。**部分免费**，按操作次数计费。"
     },
     {
       "id": "n8n",
@@ -1308,7 +1663,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "n8n 是开源的自动化工作流平台，支持自托管。提供 400+ 集成节点与可视化编排界面，可本地部署确保数据安全。**免费**开源，付费云服务可选。"
     },
     {
       "id": "manus",
@@ -1320,7 +1678,10 @@
       "pricing": "freemium",
       "origin": "cn",
       "detail": "Manus 是通用型 AI Agent，能自主规划并执行调研、编程、文档撰写等复杂任务，在云端异步运行并交付完整成果。\n\n### 核心亮点\n\n- 任务全自动拆解与执行，无需逐步指令\n- 云端异步运行，可随时查看过程回放\n- 覆盖调研、代码、数据分析、文档等场景\n\n采用积分制，注册赠送免费额度。",
-      "sections": ["AI热门工具", "Agent工具"]
+      "sections": [
+        "AI热门工具",
+        "Agent工具"
+      ]
     },
     {
       "id": "genspark",
@@ -1331,7 +1692,11 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["Agent工具", "AI搜索"]
+      "sections": [
+        "Agent工具",
+        "AI搜索"
+      ],
+      "detail": "Genspark 是 AI Agent 驱动的搜索引擎，整合了对话、搜索与深度研究。AI Agent 可自主规划搜索路径、综合分析多源信息并生成研究报告。**部分免费**。"
     },
     {
       "id": "flowise",
@@ -1342,7 +1707,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "Flowise 是开源的 LLM 应用可视化编排工具。拖拽式构建 RAG 问答、Agent、聊天机器人等 AI 应用，支持数百种模型与数据源。**免费**开源。"
     },
     {
       "id": "crewai",
@@ -1353,7 +1721,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "global",
-      "sections": ["Agent工具"]
+      "sections": [
+        "Agent工具"
+      ],
+      "detail": "CrewAI 是多 AI Agent 协作框架，可定义每个 Agent 的角色与任务实现团队协作。支持角色定制、工具集成与任务委派。**免费**开源。"
     },
     {
       "id": "iwencai",
@@ -1364,7 +1735,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "同花顺 i问财是国内领先的 AI 选股与金融数据智能助手。支持自然语言搜索股票、基金、市场数据，提供 AI 选股策略构建与回测。**部分免费**。"
     },
     {
       "id": "eastmoneychoice",
@@ -1375,7 +1749,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "东方财富妙想是东方财富旗下的 AI 金融助理。基于 Choice 金融数据库，回答个股、行业与宏观经济问题，提供数据可视化图表。**部分免费**。"
     },
     {
       "id": "xueqiu",
@@ -1386,7 +1763,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "雪球是华人地区最大的投资者社区，提供股票行情、投资交流与组合管理。AI 能力包括智能资讯、数据可视化与策略回测。**部分免费**。"
     },
     {
       "id": "tradingview",
@@ -1397,7 +1777,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "TradingView 是全球流行的图表分析与交易平台，集成 Pine Script 策略语言与 AI 技术指标分析。覆盖股票、加密货币、外汇等多市场。**部分免费**。"
     },
     {
       "id": "investing",
@@ -1408,7 +1791,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "global",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "英为财情（Investing.com）是全球访问量最大的金融数据平台之一。提供实时行情、财经日历、技术分析工具与经济指标数据。**部分免费**。"
     },
     {
       "id": "datayes",
@@ -1419,7 +1805,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "萝卜投研是通联数据推出的 AI 投研平台。提供智能研报分析、公告摘要、财务数据查询与行业比较，提升研究效率。**部分免费**。"
     },
     {
       "id": "bigquant",
@@ -1430,7 +1819,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "BigQuant 是 AI 量化投资平台，提供数据、策略研发与回测一站式服务。支持 Python 策略开发、机器学习选股与自动交易。**部分免费**。"
     },
     {
       "id": "joinquant",
@@ -1441,7 +1833,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "聚宽是国内的量化交易平台与社区。提供金融数据 API、策略回测与模拟交易，支持 Python 策略开发。**部分免费**。"
     },
     {
       "id": "36kr",
@@ -1452,7 +1847,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "36氪是关注新经济与科技创投的头部媒体。每日报道 AI、新能源、消费等赛道的最新动态、融资事件与深度产业分析。**免费**阅读。"
     },
     {
       "id": "huxiu",
@@ -1463,7 +1861,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "虎嗅是聚焦商业与科技深度内容的媒体平台。以独立视角报道大公司动态、技术趋势与商业模式。**免费**阅读。"
     },
     {
       "id": "tmtpost",
@@ -1474,7 +1875,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "钛媒体是综合性的科技财经媒体，覆盖 AI 大模型、智能硬件、自动驾驶等领域。提供快讯、深度报道与分析专栏。**免费**阅读。"
     },
     {
       "id": "ifanr",
@@ -1485,7 +1889,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "爱范儿是聚焦数字消费与科技生活方式的媒体。以独特视角解读 AI 产品、数码硬件与互联网服务。**免费**阅读。"
     },
     {
       "id": "sinanews",
@@ -1496,7 +1903,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "新浪新闻是综合门户新浪旗下的新闻资讯平台。提供实时新闻推送、热点追踪与深度报道，覆盖时政、财经、科技、体育等多领域。**免费**使用。"
     },
     {
       "id": "qqnews",
@@ -1507,7 +1917,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "腾讯新闻是腾讯旗下的综合新闻平台。依托微信与 QQ 生态，提供个性化新闻推荐、热点直播与深度内容。**免费**使用。"
     },
     {
       "id": "neteasenews",
@@ -1518,7 +1931,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "网易新闻是网易旗下的综合资讯平台。以「有态度」的品牌理念著称，提供时事新闻、深度报道与多元化评论栏目。**免费**使用。"
     },
     {
       "id": "thepaper",
@@ -1529,7 +1945,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "澎湃新闻是上海报业集团推出的数字新闻平台。以深度调查报道与政经分析见长，定位严肃新闻。**免费**使用。"
     },
     {
       "id": "xinhuanet",
@@ -1540,7 +1959,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["新闻"]
+      "sections": [
+        "新闻"
+      ],
+      "detail": "新华网（新华社）是中国国家通讯社的官方网站。提供权威时政新闻、政策解读与全球资讯。**免费**使用。"
     },
     {
       "id": "eastmoney",
@@ -1551,7 +1973,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "东方财富网是国内最大的财经门户之一。提供实时股票行情、财经新闻、研报数据与基金理财服务。**免费**使用。"
     },
     {
       "id": "10jqka",
@@ -1562,7 +1987,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "同花顺是国内领先的金融信息服务商。提供股票行情、Level-2 数据、技术分析、智能选股与社区交流。**部分免费**，高级服务付费订阅。"
     },
     {
       "id": "sinafinance",
@@ -1573,7 +2001,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "新浪财经是新浪旗下的财经资讯平台。提供国内外财经新闻、实时行情、公司公告与专家观点，覆盖股票、基金、外汇等市场。**免费**使用。"
     },
     {
       "id": "guqq",
@@ -1584,7 +2015,10 @@
       "addedAt": "2026-07-22",
       "pricing": "free",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "腾讯自选股是腾讯推出的免费股票行情与交易软件。集成腾讯 AI 能力，提供智能选股、市场热点分析与社区交流。**免费**使用。"
     },
     {
       "id": "wallstreetcn",
@@ -1595,7 +2029,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "华尔街见闻是全球财经资讯与数据平台。提供实时财经快讯、市场分析、深度报道与全球资产数据。**部分免费**。"
     },
     {
       "id": "caixin",
@@ -1606,7 +2043,10 @@
       "addedAt": "2026-07-22",
       "pricing": "freemium",
       "origin": "cn",
-      "sections": ["金融"]
+      "sections": [
+        "金融"
+      ],
+      "detail": "财新网是专注财经新闻的专业媒体。以独立调查报道与深度经济分析著称，在金融改革、反腐败等报道方面具有高度公信力。**部分付费**，订阅制。"
     }
   ]
 }
