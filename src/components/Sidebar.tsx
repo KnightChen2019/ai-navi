@@ -6,6 +6,10 @@ import {
   TrendingUp,
   Newspaper,
   Bot,
+  GraduationCap,
+  Palette,
+  Megaphone,
+  Stethoscope,
   Wrench,
   type LucideIcon,
 } from "lucide-react";
@@ -19,6 +23,10 @@ const items: NavItem[] = [
   { id: "ai-tools", label: "AI 工具", Icon: Bot },
   { id: "finance", label: "金融", Icon: TrendingUp },
   { id: "news", label: "新闻", Icon: Newspaper },
+  { id: "ai-edu", label: "AI 教育", Icon: GraduationCap },
+  { id: "ai-design", label: "AI 设计", Icon: Palette },
+  { id: "ai-marketing", label: "AI 营销", Icon: Megaphone },
+  { id: "ai-medical", label: "AI 医疗", Icon: Stethoscope },
   { id: "tools", label: "实用工具", Icon: Wrench, href: "/tools" },
 ];
 

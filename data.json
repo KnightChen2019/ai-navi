@@ -12,7 +12,11 @@
     "大模型API",
     "Agent工具",
     "金融",
-    "新闻"
+    "新闻",
+    "AI教育",
+    "AI设计",
+    "AI营销",
+    "AI医疗"
   ],
   "tools": [
     {
@@ -2047,6 +2051,422 @@
         "金融"
       ],
       "detail": "财新网是专注财经新闻的专业媒体。以独立调查报道与深度经济分析著称，在金融改革、反腐败等报道方面具有高度公信力。**部分付费**，订阅制。"
+    },
+    {
+      "id": "duolingo",
+      "name": "多邻国",
+      "img": "duolingo.png",
+      "link": "https://www.duolingo.com",
+      "description": "全球最受欢迎的 AI 语言学习平台，通过游戏化学习 40+ 语言。AI 助手 Duolingo Max 提供角色扮演对话与个性化学习路径。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "khanacademy",
+      "name": "可汗学院",
+      "img": "khanacademy.png",
+      "link": "https://www.khanacademy.org",
+      "description": "Khanmigo 是 GPT-4 驱动的 AI 导师，引导式提问而非直接给答案。覆盖数学、科学、编程等 K-12 学科，非营利组织运营。",
+      "pricing": "free",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "photomath",
+      "name": "Photomath",
+      "img": "photomath.png",
+      "link": "https://photomath.com",
+      "description": "拍照即解数学题的 AI 工具，支持算术、代数、三角、微积分等。提供分步解题指导与多种解法，Google 旗下产品。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "quizlet",
+      "name": "Quizlet",
+      "img": "quizlet.png",
+      "link": "https://quizlet.com",
+      "description": "AI 驱动的学习闪卡与测验平台。Q-Chat 功能可基于学习内容自动生成对话练习与测验题，支持多种学习模式。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "brainly",
+      "name": "Brainly",
+      "img": "brainly.png",
+      "link": "https://brainly.com",
+      "description": "全球最大的 AI 学习互助社区，学生可提问并由 AI 与社区成员共同解答。覆盖数学、科学、语言等多学科。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "zuoyebang",
+      "name": "作业帮",
+      "img": "zuoyebang.png",
+      "link": "https://www.zuoyebang.com",
+      "description": "国内领先的 AI 作业辅导平台，拍照搜题、AI 讲解、在线直播课一站式覆盖。题库覆盖小初高全学科。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "yuanfudao",
+      "name": "猿辅导",
+      "img": "yuanfudao.png",
+      "link": "https://www.yuanfudao.com",
+      "description": "AI 驱动的在线教育平台，覆盖 K-12 全学科辅导。AI 自适应学习系统根据学生水平推荐个性化练习与课程。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "socratic",
+      "name": "Socratic",
+      "img": "socratic.png",
+      "link": "https://socratic.org",
+      "description": "Google 推出的 AI 学习助手，拍照提问即获得可视化讲解。覆盖科学、数学、文学、社科等学科，与 Google 搜索深度整合。**免费**。",
+      "pricing": "free",
+      "origin": "global",
+      "sections": [
+        "AI教育"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "img": "canva.jpg",
+      "link": "https://www.canva.com",
+      "description": "全球流行的 AI 在线设计平台，整合 Magic Studio AI 套件。支持文生图、AI 编辑、一键抠图、智能排版与品牌素材管理。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "img": "figma.png",
+      "link": "https://www.figma.com",
+      "description": "领先的 AI 协作设计工具，Figma AI 支持智能图层命名、自动生成设计变体与文本提示词生成 UI 组件。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "firefly",
+      "name": "Adobe Firefly",
+      "img": "firefly.png",
+      "link": "https://firefly.adobe.com",
+      "description": "Adobe 推出的 AI 创意生成工具，深度集成在 Photoshop、Illustrator 中。支持文生图、生成式填充、文字效果与 3D 转图。**付费**订阅。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "removebg",
+      "name": "Remove.bg",
+      "img": "removebg.png",
+      "link": "https://www.remove.bg",
+      "description": "AI 一键去除图片背景的在线工具，精准识别人物、宠物、产品等主体边缘。支持批量处理与 API 集成。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "looka",
+      "name": "Looka",
+      "img": "looka.png",
+      "link": "https://looka.com",
+      "description": "AI Logo 设计与品牌识别工具。输入品牌名称与偏好即可生成数百款 Logo 方案，并提供名片、信纸等品牌套件设计。**付费**。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "jsdesign",
+      "name": "即时设计",
+      "img": "jsdesign.png",
+      "link": "https://js.design",
+      "description": "国内领先的 AI 协作设计工具，类似 Figma 的国产替代。AI 功能支持智能布局、图标生成与设计稿自动标注。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "chuangkit",
+      "name": "创客贴",
+      "img": "chuangkit.png",
+      "link": "https://www.chuangkit.com",
+      "description": "国内流行的 AI 平面设计平台，提供海量社交电商模板。AI 生图、智能抠图与自动排版降低设计门槛。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "visme",
+      "name": "Visme",
+      "img": "visme.png",
+      "link": "https://www.visme.co",
+      "description": "AI 驱动的演示文稿与信息图设计平台。支持 AI 生成完整演示文档、图表与信息图，内置丰富模板与素材库。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI设计"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "img": "jasper.png",
+      "link": "https://www.jasper.ai",
+      "description": "专注于营销内容的 AI 写作平台。支持品牌调性定制，可生成博客、广告文案、邮件、社交媒体帖子等多种营销内容。**付费**。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "copyai",
+      "name": "Copy.ai",
+      "img": "copyai.png",
+      "link": "https://www.copy.ai",
+      "description": "AI 营销文案生成工具，覆盖社媒帖子、广告文案、邮件营销、SEO 博客等。支持多语言与品牌风格对齐。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "img": "writesonic.png",
+      "link": "https://writesonic.com",
+      "description": "AI 内容创作平台，集成 ChatSonic 对话助手、SEO 文章生成器、广告文案与电商描述生成。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "rytr",
+      "name": "Rytr",
+      "img": "rytr.png",
+      "link": "https://rytr.me",
+      "description": "经济实惠的 AI 写作助手，覆盖 40+ 使用场景与 30+ 语言。支持博客、邮件、广告、社媒等内容类型。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "frase",
+      "name": "Frase",
+      "img": "frase.png",
+      "link": "https://www.frase.io",
+      "description": "AI SEO 内容优化平台，研究高排名内容策略并生成 SEO 友好的长文。集成内容简报、写作与优化于一体。**付费**。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "surferseo",
+      "name": "Surfer SEO",
+      "img": "surferseo.png",
+      "link": "https://surferseo.com",
+      "description": "AI 内容 SEO 优化工具，分析排名靠前页面并提供内容结构与关键词建议。AI 写作与实时优化评分结合。**付费**。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot AI",
+      "img": "hubspot.webp",
+      "link": "https://www.hubspot.com",
+      "description": "CRM 平台内置的全栈 AI 能力，覆盖智能内容创建、邮件营销优化、对话机器人、销售预测与客户分析。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "manychat",
+      "name": "ManyChat",
+      "img": "manychat.png",
+      "link": "https://manychat.com",
+      "description": "AI 聊天营销自动化平台，专注于 Instagram 与 Facebook Messenger 营销。AI 聊天机器人可自动回复、引导销售与培育线索。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI营销"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "ada",
+      "name": "Ada Health",
+      "img": "ada.png",
+      "link": "https://ada.com",
+      "description": "AI 症状评估与健康管理应用。通过对话式问诊分析症状、提供可能的原因分析与就医建议，覆盖 1000+ 健康状况。**免费**。",
+      "pricing": "free",
+      "origin": "global",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "babylon",
+      "name": "Babylon Health",
+      "img": "babylon.png",
+      "link": "https://www.babylonhealth.com",
+      "description": "AI 在线问诊平台，提供 24/7 症状检查、健康评估与视频问诊。AI 分诊系统帮助用户判断紧急程度并引导就医。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "global",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "dxy",
+      "name": "丁香园",
+      "img": "dxy.png",
+      "link": "https://www.dxy.cn",
+      "description": "国内最大的医疗健康社区与服务平台。AI 辅助问诊、用药查询、疾病科普，覆盖医患两端。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "buoy",
+      "name": "Buoy Health",
+      "img": "buoy.png",
+      "link": "https://www.buoyhealth.com",
+      "description": "AI 驱动的线上分诊与症状检查工具。通过临床 AI 模型分析症状，提供个性化的病情评估与诊疗建议。**免费**。",
+      "pricing": "free",
+      "origin": "global",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "infermedica",
+      "name": "Infermedica",
+      "img": "infermedica.png",
+      "link": "https://infermedica.com",
+      "description": "面向医疗机构的 AI 初级分诊 API 与症状检查器。覆盖 1000+ 临床状况，支持多语言症状评估与建议。**付费**。",
+      "pricing": "paid",
+      "origin": "global",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "tencentmiying",
+      "name": "腾讯觅影",
+      "img": "tencentmiying.png",
+      "link": "https://miying.tencent.com",
+      "description": "腾讯推出的 AI 医疗影像平台，利用 AI 辅助医生进行肺结节、眼底疾病、宫颈癌等病变筛查与分析。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "iflymedical",
+      "name": "讯飞医疗",
+      "img": "iflymedical.png",
+      "link": "https://www.iflymedical.com",
+      "description": "科大讯飞推出的 AI 医疗解决方案，覆盖智能语音电子病历、AI 辅助诊疗、慢病管理、影像分析等场景。**部分免费**。",
+      "pricing": "freemium",
+      "origin": "cn",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
+    },
+    {
+      "id": "medscape",
+      "name": "Medscape",
+      "img": "medscape.png",
+      "link": "https://www.medscape.com",
+      "description": "面向医生的专业医学信息平台，AI 辅助临床决策支持工具提供药物查询、疾病参考、指南更新与继续教育。**免费**。",
+      "pricing": "free",
+      "origin": "global",
+      "sections": [
+        "AI医疗"
+      ],
+      "addedAt": "2026-07-23"
     }
   ]
 }
