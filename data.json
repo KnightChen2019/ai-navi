@@ -13,10 +13,10 @@
     "Agent工具",
     "金融",
     "新闻",
-    "AI教育",
-    "AI设计",
-    "AI营销",
-    "AI医疗"
+    "教育",
+    "设计",
+    "营销",
+    "医疗"
   ],
   "tools": [
     {
@@ -2061,7 +2061,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2074,7 +2074,7 @@
       "pricing": "free",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2087,7 +2087,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2100,7 +2100,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2113,7 +2113,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2126,7 +2126,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2139,7 +2139,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2152,7 +2152,7 @@
       "pricing": "free",
       "origin": "global",
       "sections": [
-        "AI教育"
+        "教育"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2165,7 +2165,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2178,7 +2178,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2191,7 +2191,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2204,7 +2204,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2217,7 +2217,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2230,7 +2230,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2243,7 +2243,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2256,7 +2256,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI设计"
+        "设计"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2269,7 +2269,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2282,7 +2282,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2295,7 +2295,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2308,7 +2308,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2321,7 +2321,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2334,7 +2334,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2347,7 +2347,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2360,7 +2360,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI营销"
+        "营销"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2373,7 +2373,7 @@
       "pricing": "free",
       "origin": "global",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2386,7 +2386,7 @@
       "pricing": "freemium",
       "origin": "global",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2399,7 +2399,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2412,7 +2412,7 @@
       "pricing": "free",
       "origin": "global",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2425,7 +2425,7 @@
       "pricing": "paid",
       "origin": "global",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2438,7 +2438,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2451,7 +2451,7 @@
       "pricing": "freemium",
       "origin": "cn",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     },
@@ -2464,7 +2464,7 @@
       "pricing": "free",
       "origin": "global",
       "sections": [
-        "AI医疗"
+        "医疗"
       ],
       "addedAt": "2026-07-23"
     }

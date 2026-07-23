@@ -56,10 +56,10 @@ const BLOCK_DEFS: { id: string; title: string; sectionTitles: string[] }[] = [
   },
   { id: "finance", title: "金融", sectionTitles: ["金融"] },
   { id: "news", title: "新闻", sectionTitles: ["新闻"] },
-  { id: "ai-edu", title: "AI 教育", sectionTitles: ["AI教育"] },
-  { id: "ai-design", title: "AI 设计", sectionTitles: ["AI设计"] },
-  { id: "ai-marketing", title: "AI 营销", sectionTitles: ["AI营销"] },
-  { id: "ai-medical", title: "AI 医疗", sectionTitles: ["AI医疗"] },
+  { id: "edu", title: "教育", sectionTitles: ["教育"] },
+  { id: "design", title: "设计", sectionTitles: ["设计"] },
+  { id: "marketing", title: "营销", sectionTitles: ["营销"] },
+  { id: "medical", title: "医疗", sectionTitles: ["医疗"] },
 ];
 
 /** Blocks in display order, each populated with its sections and cards. */

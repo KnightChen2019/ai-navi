@@ -61,28 +61,28 @@ const BLOCK_COLORS: Record<string, string> = {
   "ai-tools": "border-l-brand",
   finance: "border-l-emerald-500",
   news: "border-l-sky-500",
-  "ai-edu": "border-l-violet-500",
-  "ai-design": "border-l-pink-500",
-  "ai-marketing": "border-l-amber-500",
-  "ai-medical": "border-l-red-500",
+  "edu": "border-l-violet-500",
+  "design": "border-l-pink-500",
+  "marketing": "border-l-amber-500",
+  "medical": "border-l-red-500",
 };
 const BLOCK_BG: Record<string, string> = {
   "ai-tools": "from-brand-soft/20",
   finance: "from-emerald-50/60 dark:from-emerald-950/20",
   news: "from-sky-50/60 dark:from-sky-950/20",
-  "ai-edu": "from-violet-50/60 dark:from-violet-950/20",
-  "ai-design": "from-pink-50/60 dark:from-pink-950/20",
-  "ai-marketing": "from-amber-50/60 dark:from-amber-950/20",
-  "ai-medical": "from-red-50/60 dark:from-red-950/20",
+  "edu": "from-violet-50/60 dark:from-violet-950/20",
+  "design": "from-pink-50/60 dark:from-pink-950/20",
+  "marketing": "from-amber-50/60 dark:from-amber-950/20",
+  "medical": "from-red-50/60 dark:from-red-950/20",
 };
 const BLOCK_BADGE: Record<string, string> = {
   "ai-tools": "bg-brand-soft text-brand",
   finance: "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300",
   news: "bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300",
-  "ai-edu": "bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300",
-  "ai-design": "bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300",
-  "ai-marketing": "bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300",
-  "ai-medical": "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300",
+  "edu": "bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300",
+  "design": "bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300",
+  "marketing": "bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300",
+  "medical": "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300",
 };
 
 export default function FilterableSections({ blocks }: { blocks: Block[] }) {
