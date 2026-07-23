@@ -5,7 +5,7 @@ import {
   filterCards,
   type Origin,
   type Pricing,
-  type Section,
+  type Block,
 } from "@/lib/data";
 import ToolCard from "./ToolCard";
 
@@ -57,21 +57,46 @@ function ChipGroup<T extends string>({
   );
 }
 
-export default function FilterableSections({ sections }: { sections: Section[] }) {
+const BLOCK_COLORS: Record<string, string> = {
+  "ai-tools": "border-l-brand",
+  finance: "border-l-emerald-500",
+  news: "border-l-sky-500",
+};
+const BLOCK_BG: Record<string, string> = {
+  "ai-tools": "from-brand-soft/20",
+  finance: "from-emerald-50/60 dark:from-emerald-950/20",
+  news: "from-sky-50/60 dark:from-sky-950/20",
+};
+const BLOCK_BADGE: Record<string, string> = {
+  "ai-tools": "bg-brand-soft text-brand",
+  finance: "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300",
+  news: "bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300",
+};
+
+export default function FilterableSections({ blocks }: { blocks: Block[] }) {
   const [pricing, setPricing] = React.useState<Pricing | "all">("all");
   const [origin, setOrigin] = React.useState<Origin | "all">("all");
   const filtering = pricing !== "all" || origin !== "all";
 
-  const visible = filtering
-    ? sections
-        .map((s) => ({ ...s, cards: filterCards(s.cards, { pricing, origin }) }))
-        .filter((s) => s.cards.length > 0)
-    : sections;
-  const matchCount = visible.reduce((n, s) => n + s.cards.length, 0);
+  const visible = React.useMemo(() => {
+    if (!filtering) return blocks;
+    return blocks
+      .map((b) => ({
+        ...b,
+        sections: b.sections
+          .map((s) => ({ ...s, cards: filterCards(s.cards, { pricing, origin }) }))
+          .filter((s) => s.cards.length > 0),
+      }))
+      .filter((b) => b.sections.length > 0);
+  }, [blocks, pricing, origin, filtering]);
+
+  const matchCount = visible.reduce(
+    (n, b) => n + b.sections.reduce((m, s) => m + s.cards.length, 0),
+    0
+  );
 
   return (
     <>
-      {/* Filter bar */}
       <div className="glass-subtle mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-2xl px-4 py-3">
         <ChipGroup label="费用" options={PRICING_OPTIONS} value={pricing} onChange={setPricing} />
         <ChipGroup label="地区" options={ORIGIN_OPTIONS} value={origin} onChange={setOrigin} />
@@ -82,29 +107,56 @@ export default function FilterableSections({ sections }: { sections: Section[] }
         )}
       </div>
 
-      {/* Sections */}
       {matchCount === 0 ? (
         <p className="py-16 text-center text-sm text-slate-400 dark:text-slate-500">
           没有匹配的工具
         </p>
       ) : (
         <div className="space-y-10">
-          {visible.map((section) => (
-            <section key={section.title} id={section.title} className="scroll-mt-[100px]">
-              <div className="mb-3 flex items-baseline gap-2.5 px-1">
-                <h2 className="text-[15px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-                  {section.title}
+          {visible.map((block) => (
+            <section
+              key={block.id}
+              id={block.id}
+              className={[
+                "scroll-mt-[100px] rounded-2xl border-l-[3px] border border-slate-200/60 dark:border-white/10 bg-gradient-to-r p-5 dark:from-transparent",
+                BLOCK_COLORS[block.id] || "border-l-brand",
+                BLOCK_BG[block.id] || "from-brand-soft/20",
+              ].join(" ")}
+            >
+              <div className="mb-4 flex items-baseline gap-3">
+                <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+                  {block.title}
                 </h2>
-                <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[10px] font-semibold text-brand">
-                  {section.cards.length} 个
+                <span
+                  className={[
+                    "rounded-full px-2.5 py-0.5 text-[11px] font-semibold",
+                    BLOCK_BADGE[block.id] || "bg-brand-soft text-brand",
+                  ].join(" ")}
+                >
+                  {block.sections.reduce((n, s) => n + s.cards.length, 0)} 个
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {section.cards.map((c) => (
-                  <ToolCard key={c.id} card={c} />
-                ))}
-              </div>
+              {/* Multi-section blocks show sub-headers; single-section blocks show cards directly */}
+              {block.sections.map((section) => (
+                <div key={section.title} className={block.sections.length > 1 ? "mb-6" : ""}>
+                  {block.sections.length > 1 && (
+                    <div className="mb-2.5 flex items-baseline gap-2 px-1">
+                      <h3 className="text-[14px] font-semibold text-slate-800 dark:text-slate-200">
+                        {section.title}
+                      </h3>
+                      <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[10px] font-semibold text-brand">
+                        {section.cards.length} 个
+                      </span>
+                    </div>
+                  )}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {section.cards.map((c) => (
+                      <ToolCard key={c.id} card={c} />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </section>
           ))}
         </div>

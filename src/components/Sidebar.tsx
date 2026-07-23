@@ -3,18 +3,8 @@
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import {
-  Flame,
-  MessageCircle,
-  FileText,
-  Code,
-  Brush,
-  Clapperboard,
-  Music,
-  Briefcase,
-  Search,
   TrendingUp,
   Newspaper,
-  Share2,
   Bot,
   Wrench,
   type LucideIcon,
@@ -26,19 +16,9 @@ import VisitorCounter from "./VisitorCounter";
 type NavItem = { id: string; label: string; Icon: LucideIcon; href?: string };
 
 const items: NavItem[] = [
-  { id: "AI热门工具", label: "AI 热门工具", Icon: Flame },
-  { id: "AI对话聊天", label: "AI 对话聊天", Icon: MessageCircle },
-  { id: "AI文本工具", label: "AI 文本工具", Icon: FileText },
-  { id: "AI编程工具", label: "AI 编程工具", Icon: Code },
-  { id: "AI绘画", label: "AI 绘画", Icon: Brush },
-  { id: "AI视频", label: "AI 视频", Icon: Clapperboard },
-  { id: "AI音频", label: "AI 音频", Icon: Music },
-  { id: "AI办公", label: "AI 办公", Icon: Briefcase },
-  { id: "AI搜索", label: "AI 搜索", Icon: Search },
-  { id: "大模型API", label: "大模型 API", Icon: Share2 },
-  { id: "Agent工具", label: "Agent 工具", Icon: Bot },
-  { id: "金融", label: "金融", Icon: TrendingUp },
-  { id: "新闻", label: "新闻", Icon: Newspaper },
+  { id: "ai-tools", label: "AI 工具", Icon: Bot },
+  { id: "finance", label: "金融", Icon: TrendingUp },
+  { id: "news", label: "新闻", Icon: Newspaper },
   { id: "tools", label: "实用工具", Icon: Wrench, href: "/tools" },
 ];
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getSections, getAllCards } from "@/lib/data";
+import { getBlocks, getAllCards } from "@/lib/data";
 import TrendingRail from "@/components/TrendingRail";
 import LatestRail from "@/components/LatestRail";
 import FilterableSections from "@/components/FilterableSections";
@@ -7,7 +7,7 @@ import FilterableSections from "@/components/FilterableSections";
 export const dynamic = "force-dynamic"; // 本周热门按请求读文件
 
 export default function Home() {
-  const sections = getSections();
+  const blocks = getBlocks();
   const totalCount = getAllCards().length;
 
   return (
@@ -32,8 +32,8 @@ export default function Home() {
       {/* 最新收录 */}
       <LatestRail />
 
-      {/* 筛选 + 分类列表 */}
-      <FilterableSections sections={sections} />
+      {/* 按块分区展示 */}
+      <FilterableSections blocks={blocks} />
 
       <footer className="mt-12 border-t border-slate-200/60 dark:border-white/10 pt-6 pb-4 text-xs text-slate-400 dark:text-slate-500">
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 px-1">

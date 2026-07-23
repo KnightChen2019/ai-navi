@@ -41,6 +41,34 @@ export interface Section {
   cards: CardWithSection[];
 }
 
+/** A named block grouping related sections (AI, Finance, News, …). */
+export interface Block {
+  id: string;
+  title: string;
+  sections: Section[];
+}
+
+const BLOCK_DEFS: { id: string; title: string; sectionTitles: string[] }[] = [
+  {
+    id: "ai-tools",
+    title: "AI 工具",
+    sectionTitles: ["AI热门工具", "AI对话聊天", "AI文本工具", "AI编程工具", "AI绘画", "AI视频", "AI音频", "AI办公", "AI搜索", "大模型API", "Agent工具"],
+  },
+  { id: "finance", title: "金融", sectionTitles: ["金融"] },
+  { id: "news", title: "新闻", sectionTitles: ["新闻"] },
+];
+
+/** Blocks in display order, each populated with its sections and cards. */
+export function getBlocks(): Block[] {
+  const all = getSections();
+  const lookup = new Map(all.map((s) => [s.title, s]));
+  return BLOCK_DEFS.map((b) => ({
+    id: b.id,
+    title: b.title,
+    sections: b.sectionTitles.map((t) => lookup.get(t)!).filter(Boolean),
+  }));
+}
+
 /** A card flattened with a single representative section (its first). */
 export interface CardWithSection extends Card {
   section: string;
